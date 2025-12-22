@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-bg: #FFFFFF;
+  --text-main: #333333;
+  --text-heading: #222222;
+  --text-secondary: #666666;
+  --accent-blue: #007bff;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-text-main font-sans antialiased;
+    min-height: 100vh;
+  }
+}
