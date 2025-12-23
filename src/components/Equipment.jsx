@@ -52,7 +52,7 @@ const Equipment = () => {
                         Hardware Nexus
                     </h1>
                     <p className="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
-                        The sophisticated physical architecture empowering the MUSIC4D ecosystem, from distributed sensing to central processing.
+                        The sophisticated physical architecture empowering the HRC Music4D ecosystem, from distributed sensing to central processing.
                     </p>
                 </motion.div>
 

@@ -14,12 +14,12 @@ const Layout = ({ children }) => {
             <footer className="py-12 bg-white border-t border-gray-100 mt-auto">
                 <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
                     <div className="text-center md:text-left">
-                        <h3 className="text-xl font-bold font-heading text-text-heading mb-2">MUSIC<span className="text-accent-blue">4D</span></h3>
+                        <h3 className="text-xl font-bold font-heading text-text-heading mb-2">HRC MUSIC<span className="text-accent-blue">4D</span></h3>
                         <p className="text-text-secondary text-sm">Empowering emotion through AI and sound.</p>
                     </div>
 
                     <div className="text-sm text-text-secondary">
-                        &copy; {new Date().getFullYear()} MUSIC4D Project. All rights reserved.
+                        &copy; {new Date().getFullYear()} HRC Music4D Project. All rights reserved.
                     </div>
                 </div>
             </footer>

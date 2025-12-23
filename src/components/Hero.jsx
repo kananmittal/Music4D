@@ -51,7 +51,7 @@ const Hero = () => {
                         transition={{ duration: 1, ease: "easeOut" }}
                     >
                         <h1 className="text-6xl md:text-8xl font-bold font-heading text-white mb-6 tracking-tight leading-tight">
-                            MUSIC<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-600">4D</span>
+                            HRC MUSIC<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-600">4D</span>
                         </h1>
                     </motion.div>
 

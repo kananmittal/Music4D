@@ -35,7 +35,7 @@ const RobotShowcase = () => {
                     className="mb-16 text-center"
                 >
                     <span className="text-accent-blue font-bold font-heading tracking-widest uppercase text-sm mb-3 block">Technical Showcase</span>
-                    <h2 className="text-4xl md:text-6xl font-bold font-heading mb-6 tracking-tight">Meet The Music4D Robot</h2>
+                    <h2 className="text-4xl md:text-6xl font-bold font-heading mb-6 tracking-tight">Meet The HRC Music4D Robot</h2>
                     <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed font-light">
                         Powered by the <span className="text-white font-medium">NVIDIA Groot N1 platform</span>,
                         this robot is capable of complex movement, real-time emotion analysis, and adaptive musical interaction.

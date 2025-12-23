@@ -79,10 +79,10 @@ const HomeContent = () => {
 
                 <hr className="my-24 border-gray-200/60" />
 
-                {/* Article 2: MUSIC4D Project */}
-                <Article date="7 Maggio 2025" title="MUSIC4D: When Music Meets Artificial Intelligence in the Heart of the Mediterranean">
+                {/* Article 2: HRC Music4D Project */}
+                <Article date="7 Maggio 2025" title="HRC Music4D: When Music Meets Artificial Intelligence in the Heart of the Mediterranean">
                     <p>
-                        The <strong>MUSIC4D</strong> project, approved within the framework of the "Notice for the granting of funding for the internationalisation
+                        The <strong>HRC Music4D</strong> project, approved within the framework of the "Notice for the granting of funding for the internationalisation
                         of AFAM institutions," represents a global initiative that achieved first place in score and order of funding among
                         the projects approved by the Ministry of University and Research.
                     </p>

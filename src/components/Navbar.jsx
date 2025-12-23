@@ -34,7 +34,7 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
                 {/* Logo */}
                 <Link to="/" className="text-2xl font-bold font-heading tracking-tight text-text-heading z-50">
-                    MUSIC<span className="text-accent-blue">4D</span>
+                    HRC MUSIC<span className="text-accent-blue">4D</span>
                 </Link>
 
                 {/* Desktop Menu */}
@@ -44,8 +44,8 @@ const Navbar = () => {
                             key={item.name}
                             to={item.path}
                             className={`relative text-sm font-medium tracking-wide transition-colors duration-300 ${location.pathname === item.path
-                                    ? 'text-accent-blue'
-                                    : 'text-text-secondary hover:text-text-main'
+                                ? 'text-accent-blue'
+                                : 'text-text-secondary hover:text-text-main'
                                 }`}
                         >
                             {item.name}
@@ -87,8 +87,8 @@ const Navbar = () => {
                                     to={item.path}
                                     onClick={() => setIsOpen(false)}
                                     className={`text-lg font-medium ${location.pathname === item.path
-                                            ? 'text-accent-blue'
-                                            : 'text-text-secondary'
+                                        ? 'text-accent-blue'
+                                        : 'text-text-secondary'
                                         }`}
                                 >
                                     {item.name}
