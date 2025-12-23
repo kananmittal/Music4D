@@ -3,13 +3,25 @@ import Navbar from './Navbar';
 
 const Layout = ({ children }) => {
     return (
-        <div className="flex flex-col min-h-screen bg-white">
+        <div className="flex flex-col min-h-screen bg-primary-bg font-sans text-text-main">
             <Navbar />
-            <main className="flex-grow w-full">
+
+            {/* Added pt-20 to account for fixed navbar */}
+            <main className="flex-grow w-full pt-20">
                 {children}
             </main>
-            <footer className="py-8 text-center bg-gray-50 text-text-secondary text-sm border-t border-gray-100">
-                <p>&copy; {new Date().getFullYear()} MUSIC4D Project. All rights reserved.</p>
+
+            <footer className="py-12 bg-white border-t border-gray-100 mt-auto">
+                <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div className="text-center md:text-left">
+                        <h3 className="text-xl font-bold font-heading text-text-heading mb-2">MUSIC<span className="text-accent-blue">4D</span></h3>
+                        <p className="text-text-secondary text-sm">Empowering emotion through AI and sound.</p>
+                    </div>
+
+                    <div className="text-sm text-text-secondary">
+                        &copy; {new Date().getFullYear()} MUSIC4D Project. All rights reserved.
+                    </div>
+                </div>
             </footer>
         </div>
     );

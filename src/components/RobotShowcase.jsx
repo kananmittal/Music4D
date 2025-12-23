@@ -22,26 +22,29 @@ const RobotShowcase = () => {
     const [activeVideo, setActiveVideo] = useState(videos[0]);
 
     return (
-        <section className="py-20 bg-gray-900 text-white overflow-hidden border-y border-gray-800">
-            <div className="max-w-7xl mx-auto px-6">
+        <section className="py-24 bg-gray-900 text-white overflow-hidden relative">
+            {/* Background elements */}
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-gray-900 via-gray-900 to-black opacity-90" />
+
+            <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
-                    className="mb-12 text-center"
+                    className="mb-16 text-center"
                 >
-                    <span className="text-accent-blue font-bold tracking-widest uppercase text-sm mb-2 block">Technical Showcase</span>
-                    <h2 className="text-3xl md:text-5xl font-bold mb-6">Meet The Music4D Robot</h2>
-                    <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
-                        Powered by the <span className="text-white font-semibold">NVIDIA Groot N1 platform</span>,
+                    <span className="text-accent-blue font-bold font-heading tracking-widest uppercase text-sm mb-3 block">Technical Showcase</span>
+                    <h2 className="text-4xl md:text-6xl font-bold font-heading mb-6 tracking-tight">Meet The Music4D Robot</h2>
+                    <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed font-light">
+                        Powered by the <span className="text-white font-medium">NVIDIA Groot N1 platform</span>,
                         this robot is capable of complex movement, real-time emotion analysis, and adaptive musical interaction.
                     </p>
                 </motion.div>
 
                 <div className="grid lg:grid-cols-3 gap-8 h-auto lg:h-[600px]">
                     {/* Main Player */}
-                    <div className="lg:col-span-2 relative bg-black rounded-2xl overflow-hidden shadow-2xl border border-gray-800 flex flex-col">
+                    <div className="lg:col-span-2 relative bg-black rounded-3xl overflow-hidden shadow-2xl flex flex-col group">
                         <div className="relative flex-grow">
                             <AnimatePresence mode="wait">
                                 <motion.video
@@ -60,51 +63,51 @@ const RobotShowcase = () => {
                             </AnimatePresence>
                         </div>
 
-                        <div className="p-6 bg-gray-800/50 backdrop-blur-sm border-t border-gray-700">
+                        <div className="p-8 bg-gradient-to-t from-black to-transparent backdrop-blur-sm absolute bottom-0 left-0 right-0">
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <h3 className="text-2xl font-bold text-white mb-1">{activeVideo.title}</h3>
-                                    <p className="text-gray-400 text-sm">{activeVideo.desc}</p>
+                                    <h3 className="text-2xl font-bold font-heading text-white mb-1">{activeVideo.title}</h3>
+                                    <p className="text-gray-400 text-sm">Real-time simulation</p>
                                 </div>
-                                <div className="flex items-center gap-2">
+                                <div className="flex items-center gap-2 bg-red-500/20 px-3 py-1 rounded-full border border-red-500/30">
                                     <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-                                    <span className="text-xs font-mono text-red-500 uppercase">Live Feed</span>
+                                    <span className="text-xs font-mono text-red-500 uppercase font-bold">Live Feed</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     {/* Playlist */}
-                    <div className="flex flex-col gap-3 overflow-y-auto pr-2 custom-scrollbar lg:h-full">
+                    <div className="flex flex-col gap-4 overflow-y-auto pr-2 custom-scrollbar lg:h-full">
                         {videos.map((video) => (
                             <motion.button
                                 key={video.id}
                                 onClick={() => setActiveVideo(video)}
-                                whileHover={{ scale: 1.02, backgroundColor: 'rgba(31, 41, 55, 0.8)' }}
+                                whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
-                                className={`flex items-center gap-4 p-3 rounded-xl transition-all duration-300 border text-left group ${activeVideo.id === video.id
-                                    ? 'bg-gray-800 border-accent-blue shadow-[0_0_15px_rgba(0,123,255,0.2)]'
-                                    : 'bg-transparent border-gray-800 hover:border-gray-600'
+                                className={`flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 text-left group border ${activeVideo.id === video.id
+                                    ? 'bg-gray-800/80 border-accent-blue/50 shadow-lg'
+                                    : 'bg-gray-800/20 border-transparent hover:bg-gray-800/40'
                                     }`}
                             >
-                                <div className="w-24 h-16 bg-black rounded-lg overflow-hidden shrink-0 relative border border-gray-700">
+                                <div className="w-28 h-20 bg-black rounded-xl overflow-hidden shrink-0 relative shadow-inner">
                                     <video
                                         src={video.src}
-                                        className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity"
+                                        className="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
                                         muted
                                         preload="metadata"
                                     />
                                     {activeVideo.id === video.id && (
                                         <div className="absolute inset-0 bg-accent-blue/20 flex items-center justify-center">
-                                            <div className="w-3 h-3 bg-white rounded-full shadow-lg" />
+                                            <div className="w-2 h-2 bg-white rounded-full shadow-[0_0_10px_white]" />
                                         </div>
                                     )}
                                 </div>
                                 <div>
-                                    <h4 className={`font-semibold text-sm transition-colors ${activeVideo.id === video.id ? 'text-accent-blue' : 'text-gray-300 group-hover:text-white'}`}>
+                                    <h4 className={`font-bold font-heading text-sm transition-colors ${activeVideo.id === video.id ? 'text-accent-blue' : 'text-gray-300 group-hover:text-white'}`}>
                                         {video.title}
                                     </h4>
-                                    <p className="text-xs text-gray-500 mt-1">Clip 0{video.id}</p>
+                                    <p className="text-xs text-gray-500 mt-1 uppercase tracking-wider">Clip 0{video.id}</p>
                                 </div>
                             </motion.button>
                         ))}

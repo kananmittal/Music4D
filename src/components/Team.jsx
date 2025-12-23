@@ -25,8 +25,8 @@ const Team = () => {
     ];
 
     const tier3 = [
-        { name: 'Caterina Perri', role: 'Team Member', linkedin: null, image: imgPerri, affiliation: "Ph. D, Post doc at University of Calabria" },
         { name: 'Pasquale Molinaro', role: 'Team Member', linkedin: 'https://www.linkedin.com/in/pasquale-molinaro-8654021aa/', image: imgMolinaro, affiliation: "Generative AI and Machine Learning Engineer Specialist & Research fellow at University of Calabria" },
+        { name: 'Caterina Perri', role: 'Team Member', linkedin: null, image: imgPerri, affiliation: "Ph. D, Post doc at University of Calabria" },
         { name: 'Akhtar Khan', role: 'Team Member', linkedin: null, image: imgKhan, affiliation: "Ph. D at University of Calabria" },
         { name: 'Mattia Presta', role: 'Team Member', linkedin: 'https://www.linkedin.com/in/mattia-presta-66488939a/', image: imgPresta, affiliation: "Generative AI and Machine Learning Engineer Specialist & Research fellow at University of Calabria" }
     ];
@@ -35,65 +35,83 @@ const Team = () => {
         const isLarge = size === "lg";
         return (
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className={`bg-white rounded-xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:-translate-y-1 transition-transform duration-300 ${isLarge ? 'p-8 max-w-lg mx-auto' : 'p-6'}`}
+                whileHover={{ y: -8 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                className={`group relative bg-white rounded-3xl shadow-soft hover:shadow-2xl transition-all duration-300 border border-gray-100/50 overflow-hidden ${isLarge ? 'p-10 max-w-lg mx-auto' : 'p-6'}`}
             >
-                <div className={`${isLarge ? 'w-48 h-48 border-4' : 'w-32 h-32 border-2'} mb-4 rounded-full overflow-hidden border-gray-100 p-1`}>
-                    <img
-                        src={member.image}
-                        alt={member.name}
-                        className="w-full h-full object-cover rounded-full"
-                    />
-                </div>
-                <h3 className={`${isLarge ? 'text-2xl' : 'text-lg'} font-bold text-gray-900 mb-1`}>{member.name}</h3>
-                <p className={`${isLarge ? 'text-sm' : 'text-xs'} text-accent-blue font-bold uppercase tracking-wider mb-2`}>{member.role}</p>
-                <p className="text-secondary text-xs text-gray-500 mb-4 italic">{member.affiliation}</p>
+                {/* Decorative background blur */}
+                <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-gray-50 to-transparent opacity-50 transition-opacity group-hover:opacity-100" />
 
-                {member.linkedin && (
-                    <a
-                        href={member.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="pt-4 border-t border-gray-100 w-full text-sm text-gray-500 hover:text-[#0077b5] font-medium transition-colors"
-                    >
-                        LinkedIn Profile
-                    </a>
-                )}
+                <div className="relative z-10 flex flex-col items-center text-center">
+                    <div className={`${isLarge ? 'w-48 h-48 border-4' : 'w-32 h-32 border-[3px]'} mb-6 rounded-full overflow-hidden border-white shadow-lg group-hover:scale-105 transition-transform duration-500`}>
+                        <img
+                            src={member.image}
+                            alt={member.name}
+                            className="w-full h-full object-cover rounded-full"
+                        />
+                    </div>
+
+                    <h3 className={`${isLarge ? 'text-3xl' : 'text-xl'} font-bold font-heading text-text-heading mb-2 group-hover:text-accent-blue transition-colors`}>{member.name}</h3>
+                    <p className={`${isLarge ? 'text-base' : 'text-xs'} text-accent-blue font-bold uppercase tracking-widest mb-3`}>{member.role}</p>
+                    <p className="text-text-secondary text-sm font-medium leading-relaxed max-w-[90%]">{member.affiliation}</p>
+
+                    {member.linkedin && (
+                        <a
+                            href={member.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-50 text-gray-600 hover:bg-[#0077b5] hover:text-white transition-all duration-300 text-sm font-semibold group/link"
+                        >
+                            <span>LinkedIn Profile</span>
+                            <svg className="w-4 h-4 transform group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                        </a>
+                    )}
+                </div>
             </motion.div>
         );
     };
 
     return (
-        <div className="py-20 bg-gray-50 min-h-screen">
+        <div className="py-24 bg-primary-bg min-h-screen">
             <div className="max-w-7xl mx-auto px-6">
 
                 {/* Header */}
-                <div className="text-center mb-16">
-                    <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Team</h1>
-                    <p className="text-gray-600 max-w-2xl mx-auto">
-                        A multidisciplinary group of researchers and engineers from the University of Calabria.
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-center mb-20"
+                >
+                    <h1 className="text-5xl md:text-6xl font-bold font-heading text-text-heading mb-6 tracking-tight">Our <span className="text-accent-blue">Team</span></h1>
+                    <p className="text-xl text-text-secondary max-w-2xl mx-auto font-light leading-relaxed">
+                        A multidisciplinary collective of researchers and engineers bridging the gap between <span className="font-medium text-text-main">AI</span> and <span className="font-medium text-text-main">Human Emotion</span>.
                     </p>
-                </div>
+                </motion.div>
 
                 {/* DIMES Department (Primary) */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    className="bg-white p-10 rounded-2xl shadow-sm border-l-4 border-l-[#be1622] border-gray-100 mb-12 flex flex-col md:flex-row items-center gap-10"
+                    viewport={{ once: true }}
+                    className="glass-card p-12 mb-16 flex flex-col md:flex-row items-center gap-12 relative overflow-hidden group"
                 >
-                    <div className="w-full md:w-1/3 flex justify-center">
-                        <img src={logoDimes} alt="DIMES Logo" className="max-w-[250px]" />
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-accent-blue/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-accent-blue/10 transition-colors duration-700" />
+
+                    <div className="w-full md:w-1/3 flex justify-center relative z-10">
+                        <img src={logoDimes} alt="DIMES Logo" className="max-w-[280px] drop-shadow-sm transform hover:scale-105 transition-transform duration-500" />
                     </div>
-                    <div className="w-full md:w-2/3 text-left">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">DIMES Department</h2>
-                        <h3 className="text-xl text-gray-500 mb-6">University of Calabria</h3>
-                        <p className="text-gray-600 leading-relaxed mb-6 text-justify">
-                            The DIMES (Department of Computer Engineering, Modeling, Electronics, and System Engineering) was established in 2013. It includes 78 professors and researchers and promotes research in computer engineering, modeling, electronics, and telecommunications.
+                    <div className="w-full md:w-2/3 text-left relative z-10">
+                        <h2 className="text-3xl font-bold font-heading text-text-heading mb-2">DIMES Department</h2>
+                        <h3 className="text-xl text-text-secondary font-medium mb-6">University of Calabria</h3>
+                        <p className="text-lg text-text-secondary leading-relaxed mb-8 text-justify">
+                            The DIMES (Department of Computer Engineering, Modeling, Electronics, and System Engineering) includes 78 professors and researchers, promoting cutting-edge research in computer engineering, modeling, electronics, and telecommunications.
                         </p>
-                        <a href="https://www2.dimes.unical.it/" target="_blank" rel="noopener noreferrer" className="text-[#be1622] font-semibold hover:underline inline-flex items-center">
-                            Visit DIMES <span className="ml-1">→</span>
+                        <a href="https://www2.dimes.unical.it/" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center text-accent-blue font-bold text-lg hover:text-blue-700 transition-colors">
+                            Visit DIMES
+                            <span className="ml-2 transform group-hover:translate-x-1 transition-transform duration-300">→</span>
                         </a>
                     </div>
                 </motion.div>
@@ -102,31 +120,33 @@ const Team = () => {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 mb-20 flex flex-col md:flex-row-reverse items-center gap-10"
+                    viewport={{ once: true }}
+                    className="glass-card p-10 mb-24 flex flex-col md:flex-row-reverse items-center gap-12"
                 >
                     <div className="w-full md:w-1/4 flex justify-center">
-                        <img src={badgeSpeme} alt="Highly Cited Researchers" className="max-w-[120px]" />
+                        <img src={badgeSpeme} alt="Highly Cited Researchers" className="max-w-[140px] drop-shadow-md" />
                     </div>
                     <div className="w-full md:w-3/4">
-                        <h2 className="text-2xl font-bold text-gray-800 mb-3">SPEME Lab at work</h2>
-                        <p className="text-gray-600 leading-relaxed mb-4 text-justify">
+                        <h2 className="text-3xl font-bold font-heading text-text-heading mb-4">SPEME Lab at work</h2>
+                        <p className="text-lg text-text-secondary leading-relaxed mb-6 text-justify">
                             The SPEME (Smart, PErvasive and Mobile systems Engineering) Lab focuses on trustworthy, distributed, intelligent, and multi-sensorial systems. Steps into Internet of Things and Smart Systems of Systems domains.
                         </p>
-                        <a href="https://labs.dimes.unical.it/speme/" target="_blank" rel="noopener noreferrer" className="text-accent-blue font-semibold hover:underline inline-flex items-center">
-                            Visit SPEME Lab <span className="ml-1">→</span>
+                        <a href="https://labs.dimes.unical.it/speme/" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center text-accent-blue font-bold text-lg hover:text-blue-700 transition-colors">
+                            Explore SPEME Lab
+                            <span className="ml-2 transform group-hover:translate-x-1 transition-transform duration-300">→</span>
                         </a>
                     </div>
                 </motion.div>
 
                 {/* Team Hierarchy */}
-                <div className="space-y-12">
+                <div className="space-y-16">
                     {/* Tier 1: Lead */}
                     <div className="flex justify-center">
                         {tier1.map((member, idx) => <MemberCard key={idx} member={member} size="lg" />)}
                     </div>
 
                     {/* Tier 2: Key Researchers */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                         {tier2.map((member, idx) => <MemberCard key={idx} member={member} />)}
                     </div>
 

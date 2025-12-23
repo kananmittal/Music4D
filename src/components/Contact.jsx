@@ -42,11 +42,16 @@ const Contact = () => {
     ];
 
     return (
-        <div className="py-20 max-w-6xl mx-auto px-6">
-            <div className="text-center mb-16">
-                <h1 className="text-4xl font-bold text-gray-900 mb-4">Get in Touch</h1>
-                <p className="text-gray-600 max-w-2xl mx-auto">Connect with us on our platforms or reach out directly.</p>
-            </div>
+        <div className="py-24 max-w-6xl mx-auto px-6">
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-center mb-20"
+            >
+                <h1 className="text-5xl font-bold font-heading text-text-heading mb-6">Get in <span className="text-accent-blue">Touch</span></h1>
+                <p className="text-xl text-text-secondary max-w-2xl mx-auto font-light">Connect with us on our platforms or reach out directly.</p>
+            </motion.div>
 
             <div className="grid md:grid-cols-3 gap-8">
                 {contacts.map((item, index) => (
@@ -55,23 +60,26 @@ const Contact = () => {
                         href={item.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
-                        className="bg-white block rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+                        className="glass-card block p-10 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden"
                     >
-                        <div className="flex flex-col items-center text-center">
-                            <div className={`w-20 h-20 ${item.color.replace('bg-', 'bg-opacity-10 bg-')} rounded-2xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110`}>
+                        <div className={`absolute top-0 right-0 w-32 h-32 ${item.color.replace('bg-', 'bg-')} opacity-5 rounded-full blur-2xl -translate-y-8 translate-x-8 group-hover:scale-150 transition-transform duration-700`}></div>
+
+                        <div className="flex flex-col items-center text-center relative z-10">
+                            <div className={`w-24 h-24 ${item.color.replace('bg-', 'bg-opacity-10 bg-')} rounded-2xl flex items-center justify-center mb-8 transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110 shadow-sm`}>
                                 <div className={item.iconColor}>
                                     {item.icon}
                                 </div>
                             </div>
-                            <h2 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-amber-600 transition-colors">{item.title}</h2>
-                            <p className="text-gray-500 font-medium text-sm">{item.subtitle}</p>
+                            <h2 className="text-2xl font-bold font-heading text-text-heading mb-3 group-hover:text-accent-blue transition-colors">{item.title}</h2>
+                            <p className="text-text-secondary font-medium text-base mb-6">{item.subtitle}</p>
 
-                            <div className="mt-6 flex items-center text-sm font-semibold text-gray-400 group-hover:text-amber-600 transition-colors">
+                            <div className="inline-flex items-center text-sm font-bold text-accent-blue/80 group-hover:text-accent-blue transition-colors uppercase tracking-wider">
                                 <span>Visit Link</span>
-                                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                                <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                             </div>
                         </div>
                     </motion.a>

@@ -7,14 +7,25 @@ export default {
     theme: {
         extend: {
             colors: {
-                'accent-blue': '#007bff',
-                'text-main': '#333333',
-                'text-heading': '#222222',
-                'text-secondary': '#666666',
+                // Premium Light Theme Palette
+                'primary-bg': '#FAFAFA',
+                'secondary-bg': '#FFFFFF',
+                'accent-blue': '#2563EB',
+                'text-main': '#1F2937',
+                'text-heading': '#111827',
+                'text-secondary': '#6B7280',
             },
             fontFamily: {
-                sans: ['"Libre Franklin"', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+                sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                heading: ['"Outfit"', 'sans-serif'],
             },
+            boxShadow: {
+                'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                'glow': '0 0 15px rgba(37, 99, 235, 0.3)',
+            },
+            backdropBlur: {
+                'xs': '2px',
+            }
         },
     },
     plugins: [],

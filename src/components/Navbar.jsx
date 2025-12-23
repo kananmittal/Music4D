@@ -1,8 +1,20 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+    const location = useLocation();
+
+    // Handle scroll effect
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 20);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     const navItems = [
         { name: 'Home', path: '/' },
@@ -15,76 +27,79 @@ const Navbar = () => {
     ];
 
     return (
-        <nav style={styles.nav}>
-            <div style={styles.container}>
-                <div style={styles.logo}>MUSIC4D</div>
-
-                {/* Mobile Menu Button */}
-                <button style={styles.menuButton} onClick={() => setIsOpen(!isOpen)}>
-                    ☰
-                </button>
+        <nav
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'glass py-3' : 'bg-transparent py-5'
+                }`}
+        >
+            <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+                {/* Logo */}
+                <Link to="/" className="text-2xl font-bold font-heading tracking-tight text-text-heading z-50">
+                    MUSIC<span className="text-accent-blue">4D</span>
+                </Link>
 
                 {/* Desktop Menu */}
-                <ul style={{ ...styles.menu, ...(isOpen ? styles.menuOpen : {}) }}>
+                <div className="hidden md:flex items-center gap-8">
                     {navItems.map((item) => (
-                        <li key={item.name} style={styles.menuItem}>
-                            <Link to={item.path} style={styles.link}>
-                                {item.name}
-                            </Link>
-                        </li>
+                        <Link
+                            key={item.name}
+                            to={item.path}
+                            className={`relative text-sm font-medium tracking-wide transition-colors duration-300 ${location.pathname === item.path
+                                    ? 'text-accent-blue'
+                                    : 'text-text-secondary hover:text-text-main'
+                                }`}
+                        >
+                            {item.name}
+                            {location.pathname === item.path && (
+                                <motion.div
+                                    layoutId="underline"
+                                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-accent-blue rounded-full"
+                                />
+                            )}
+                        </Link>
                     ))}
-                </ul>
+                </div>
+
+                {/* Mobile Menu Button */}
+                <button
+                    className="md:hidden z-50 p-2 text-text-heading focus:outline-none"
+                    onClick={() => setIsOpen(!isOpen)}
+                >
+                    <div className="w-6 h-5 relative flex flex-col justify-between">
+                        <span className={`w-full h-0.5 bg-current transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2' : ''}`} />
+                        <span className={`w-full h-0.5 bg-current transition-all duration-300 ${isOpen ? 'opacity-0' : ''}`} />
+                        <span className={`w-full h-0.5 bg-current transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-2.5' : ''}`} />
+                    </div>
+                </button>
+
+                {/* Mobile Menu Overlay */}
+                <AnimatePresence>
+                    {isOpen && (
+                        <motion.div
+                            initial={{ opacity: 0, y: -20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -20 }}
+                            transition={{ duration: 0.2 }}
+                            className="absolute top-full left-0 right-0 bg-white border-b border-gray-100 shadow-xl md:hidden flex flex-col p-6 gap-4"
+                        >
+                            {navItems.map((item) => (
+                                <Link
+                                    key={item.name}
+                                    to={item.path}
+                                    onClick={() => setIsOpen(false)}
+                                    className={`text-lg font-medium ${location.pathname === item.path
+                                            ? 'text-accent-blue'
+                                            : 'text-text-secondary'
+                                        }`}
+                                >
+                                    {item.name}
+                                </Link>
+                            ))}
+                        </motion.div>
+                    )}
+                </AnimatePresence>
             </div>
         </nav>
     );
-};
-
-const styles = {
-    nav: {
-        backgroundColor: '#fff',
-        borderBottom: '1px solid #eee',
-        padding: '1rem 0',
-        position: 'sticky',
-        top: 0,
-        zIndex: 1000,
-    },
-    container: {
-        maxWidth: '1200px',
-        margin: '0 auto',
-        padding: '0 20px',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        flexWrap: 'wrap',
-    },
-    logo: {
-        fontSize: '1.5rem',
-        fontWeight: 'bold',
-        color: 'var(--text-heading)',
-    },
-    menuButton: {
-        display: 'none',
-        background: 'none',
-        border: 'none',
-        fontSize: '1.5rem',
-        cursor: 'pointer',
-    },
-    menu: {
-        listStyle: 'none',
-        margin: 0,
-        padding: 0,
-        display: 'flex',
-        gap: '20px',
-    },
-    menuItem: {},
-    link: {
-        textDecoration: 'none',
-        color: 'var(--text-main)',
-        fontWeight: '500',
-        fontSize: '0.9rem',
-        textTransform: 'uppercase',
-    },
-    // Media query style simulation for logic - in real CSS often easier, but inline ok for simple
 };
 
 export default Navbar;
