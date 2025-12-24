@@ -73,7 +73,7 @@ const ProjectOverview = () => {
                                 className="w-full h-auto rounded-lg shadow-inner border border-gray-100"
                             />
                             <div className="mt-4 pt-4 border-t border-gray-100 text-center">
-                                <p className="text-xs font-bold tracking-widest text-text-secondary uppercase">Fig 1. Proposed MA-HRT Orchestra Framework</p>
+                                <p className="text-xs font-bold tracking-widest text-text-secondary uppercase">Proposed MA-HRT Orchestra Framework</p>
                             </div>
                         </div>
                     </motion.div>

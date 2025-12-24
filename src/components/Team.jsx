@@ -21,7 +21,7 @@ const Team = () => {
 
     const tier2 = [
         { name: 'Francesco Pupo', role: 'Researcher', linkedin: 'https://projects.dimes.unical.it/music4d/il-team/', image: imgPupo, affiliation: "Associate Professor at University of Calabria" },
-        { name: 'Rashmi Chawla', role: 'Team Member', linkedin: 'https://www.linkedin.com/in/rashmi-chawla-710348128/', image: imgChawla, affiliation: "Associate Professor at JC Bose University, India & Coordinator at Institution’s Innovation Council, University of Calabria" }
+        { name: 'Rashmi Chawla', role: 'Team Member', linkedin: 'https://www.linkedin.com/in/rashmi-chawla-710348128/', image: imgChawla, affiliation: "Associate Professor at JC Bose University, YMCA, India & Post Doc. Researcher at University of Calabria" }
     ];
 
     const tier3 = [

@@ -33,8 +33,8 @@ const Navbar = () => {
         >
             <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
                 {/* Logo */}
-                <Link to="/" className="text-2xl font-bold font-heading tracking-tight text-text-heading z-50">
-                    HRC MUSIC<span className="text-accent-blue">4D</span>
+                <Link to="/" className="z-50 flex items-center">
+                    <img src="/logo.png" alt="HRC Music4D Logo" className="h-10 w-auto" />
                 </Link>
 
                 {/* Desktop Menu */}

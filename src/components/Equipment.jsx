@@ -31,6 +31,12 @@ const modules = [
         subtitle: "Networking Equipment",
         desc: "WiFi GBRouters, high-speed switches, and fiber cabling ensuring high-bandwidth, low-latency reliable communication across the entity.",
         specs: ["Gigabit Capacity", "Low Latency", "Reliable Mesh"],
+    },
+    {
+        title: "Unitree G1",
+        subtitle: "Humanoid Agent",
+        desc: "A high-performance general-purpose humanoid robot featuring 360° sensory perception and advanced joint flexibility. Designed for agile movement and robust human-robot collaboration.",
+        specs: ["360° LiDAR/Depth", "High Torque Motors", "AI-Driven"],
     }
 ];
 
