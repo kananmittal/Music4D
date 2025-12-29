@@ -9,6 +9,8 @@ import imgPresta from '../assets/MattiaPresta.png';
 import imgChawla from '../assets/Chwalla-768x768.jpeg';
 import imgPerri from '../assets/Perri.png';
 
+import imgLongo from '../assets/rlongo_pic.bmp';
+
 // Department Logos
 import logoDimes from '../assets/logo_dimes_Q.png';
 import badgeSpeme from '../assets/HCR-Ribbon_Social_215x335_ForInstitutions-193x300.png';
@@ -21,7 +23,8 @@ const Team = () => {
 
     const tier2 = [
         { name: 'Francesco Pupo', role: 'Researcher', linkedin: 'https://projects.dimes.unical.it/music4d/il-team/', image: imgPupo, affiliation: "Associate Professor at University of Calabria" },
-        { name: 'Rashmi Chawla', role: 'Team Member', linkedin: 'https://www.linkedin.com/in/rashmi-chawla-710348128/', image: imgChawla, affiliation: "Associate Professor at JC Bose University, YMCA, India & Post Doc. Researcher at University of Calabria" }
+        { name: 'Rashmi Chawla', role: 'Researcher', linkedin: 'https://www.linkedin.com/in/rashmi-chawla-710348128/', image: imgChawla, affiliation: "Associate Professor at JC Bose University, YMCA, India & Post Doc. Researcher at University of Calabria" },
+        { name: 'Raffaele Longo', role: 'Music Expert', linkedin: 'https://www.linkedin.com/in/raffaele-longo-897560b7', image: imgLongo, affiliation: "Researcher at University of Calabria" }
     ];
 
     const tier3 = [
@@ -146,7 +149,7 @@ const Team = () => {
                     </div>
 
                     {/* Tier 2: Key Researchers */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                         {tier2.map((member, idx) => <MemberCard key={idx} member={member} />)}
                     </div>
 
