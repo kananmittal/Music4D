@@ -1,8 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-// import demoVideo from '../assets/GEM_AI_DEMO.mp4';
-// Video file 'GEM_AI_DEMO.mp4' is too large (200MB+) for GitHub (limit 100MB).
-// Please use a hosted video link (YouTube/Vimeo) or Git LFS.
+import demoVideo from '../assets/GEM_AI_DEMO.mp4';
 
 const Demo = () => {
     return (
@@ -16,13 +14,8 @@ const Demo = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="rounded-xl shadow-lg overflow-hidden border border-gray-100 bg-gray-100 py-20"
+                className="rounded-xl shadow-lg overflow-hidden border border-gray-100 bg-black"
             >
-                <div className="text-gray-500">
-                    <p className="mb-2">Demo Video Placeholder</p>
-                    <p className="text-sm">(Video file excluded from repository due to size limits)</p>
-                </div>
-                {/* 
                 <video
                     src={demoVideo}
                     controls
@@ -31,7 +24,6 @@ const Demo = () => {
                 >
                     Your browser does not support the video tag.
                 </video>
-                 */}
             </motion.div>
         </div>
     );
