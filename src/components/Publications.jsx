@@ -11,6 +11,15 @@ const Publications = () => {
             pages: "pp. 356-361",
             publisher: "IEEE",
             link: "https://ieeexplore.ieee.org/abstract/document/11154360"
+        },
+        {
+            title: "EAC-HRC: Emotion-Aware Communication for Human-Robot Collaboration in a Music Orchestra System",
+            authors: "Rashmi Chawla, Raffaele Longo, Francesco Pupo and Giancarlo Fortino",
+            journal: "",
+            year: "",
+            pages: "",
+            publisher: "",
+            link: ""
         }
     ];
 
