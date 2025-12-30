@@ -23,7 +23,7 @@ const Team = () => {
 
     const tier2 = [
         { name: 'Francesco Pupo', role: 'Researcher', linkedin: 'https://projects.dimes.unical.it/music4d/il-team/', image: imgPupo, affiliation: "Associate Professor at University of Calabria" },
-        { name: 'Raffaele Longo', role: 'Music Expert', linkedin: 'https://www.linkedin.com/in/raffaele-longo-897560b7', image: imgLongo, affiliation: "Full Professor at University of Calabria" },
+        { name: 'Raffaele Longo', role: 'Music Expert', linkedin: 'https://www.linkedin.com/in/raffaele-longo-897560b7', image: imgLongo, affiliation: "Full Professor of Music Theory ‘Luigi Cherubini” State Conservatory of Music FLORENCE" },
         { name: 'Rashmi Chawla', role: 'Researcher', linkedin: 'https://www.linkedin.com/in/rashmi-chawla-710348128/', image: imgChawla, affiliation: "Associate Professor at JC Bose University, YMCA, India & Post Doc. Researcher at University of Calabria" }
     ];
 
