@@ -61,7 +61,7 @@ const Hero = () => {
                         transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
                         className="text-xl md:text-3xl text-gray-200 font-light max-w-3xl mx-auto leading-relaxed"
                     >
-                        Artificial Intelligence that <span className="italic text-blue-200">hears</span> your emotions.
+                        Artificial Intelligence that captures and generates behaviors and emotions in musical environments
                     </motion.p>
 
                     <motion.div
