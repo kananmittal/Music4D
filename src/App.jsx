@@ -8,6 +8,7 @@ import Demo from './components/Demo';
 import Team from './components/Team';
 import Equipment from './components/Equipment';
 import Publications from './components/Publications';
+import Events from './components/Events';
 import Contact from './components/Contact';
 import './App.css';
 
@@ -30,6 +31,7 @@ function App() {
           <Route path="/team" element={<Team />} />
           <Route path="/equipment" element={<Equipment />} />
           <Route path="/publications" element={<Publications />} />
+          <Route path="/events" element={<Events />} />
           <Route path="/demo" element={<Demo />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
