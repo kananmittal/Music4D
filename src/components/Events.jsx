@@ -14,16 +14,47 @@ import image3_1 from '../assets/image3_1.png';
 import image3_2 from '../assets/image3_2.png';
 import image3_3 from '../assets/image3_3.png';
 
+// Importing new images for Special Session
+import fortinoImg from '../assets/Fortino-3.jpg';
+import chawlaImg from '../assets/Chwalla-768x768.jpeg';
+import pupoImg from '../assets/Pupo-1.jpeg';
+import unicalImg from '../assets/UNICAL.jpg';
+
 const Events = () => {
     const events = [
         {
-            id: 1,
-            title: 'Palermo: International Meeting "Extended Partnerships"',
-            date: 'Oct 21–22, 2025',
-            description: 'Presented our research at the international meeting "Partenariati Estesi: Dallo Stato dell’Arte alle Strategie per il Futuro", an event promoted by the MUSIC 4D project (funded by PNRR) to innovate the AFAM system through digitalization and AI.',
-            keyPresentation: 'I delivered a talk titled "Towards the Cyber Symbiotic Orchestra: Architecture and Methodologies for Human-Robot Emotional Teaming", showcasing a video summary of our work on human-robot interaction.',
-            keyOutcomes: 'The presentation highlighted our methodologies for the emotional analysis of visual communication between conductors, musicians, and the audience. Furthermore, I introduced the structure of the upcoming WP3 course: "Digital Music, Cybernetics, Generative AI, and Emotional Collaboration". The event fostered crucial dialogue between Italian and international institutions to strengthen Southern Italy\'s role as a hub for cultural and technological experimentation.',
-            images: [image1_1, image1_2, image1_3, image1_4]
+            id: 4,
+            title: 'Special Session @ IEEE ICHMS 2026',
+            date: '1st July – 3rd July 2026',
+            description: 'We are organizing a Special Session on "Synergizing Generative AI, Human–Robot Collaboration, and High-Fidelity Digital Twins" under the MUSIC4D Framework.',
+            venue: 'NTU, Singapore',
+            about: 'This Special Session explores how Generative AI, Human–Robot Collaboration (HRC), and High-Fidelity Digital Twins converge to shape the next generation of human-centric intelligent systems. Aligned with the IEEE ICHMS 2026 theme “Beyond Interaction”, the session highlights the MUSIC4D paradigm, where intelligent systems do more than respond—they perceive, interpret, and synchronize with human intent through multimodal sensing and real-time digital representations. The focus is on bi-directional physical–virtual loops, enabling humans and robots to operate as cohesive teammates rather than tools, particularly in creative, industrial, and cyber-physical environments.',
+            focusAreas: [
+                'Human–Robot Teaming (HRT)',
+                'Generative & Adaptive Digital Twins',
+                'Multi-Agent and Edge Intelligence',
+                'Multimodal intent & emotion sensing',
+                'Trust, explainability & ethics'
+            ],
+            organizers: [
+                'Prof. Giancarlo Fortino, University of Calabria, Italy',
+                'Dr. Rashmi Chawla, J.C. Bose University of Science & Technology, India',
+                'Dr. Francesco Pupo, University of Calabria, Italy'
+            ],
+            callForPapers: {
+                details: 'Open to global researchers in AI, Robotics, Cybernetics, and Human–Machine Systems. Standard IEEE 6-page format · Peer-reviewed.',
+                deadline: '31 Jan 2026'
+            },
+            images: [unicalImg, fortinoImg, chawlaImg, pupoImg]
+        },
+        {
+            id: 3,
+            title: 'New York – Unical: Real-Time Transatlantic Emotion Analysis',
+            date: 'Dec 2025',
+            description: 'We successfully implemented a high-performance technical pipeline for the remote, real-time analysis of emotional dynamics between New York and the University of Calabria (Italy).',
+            technicalFramework: 'Using a ZeroTier Software Defined Network (SDN) and a custom FFmpeg/UDP streaming protocol, we established a secure, low-latency "virtual LAN" across the Atlantic. This allowed our GPU-accelerated servers in Italy to process live visual data from New York as if it were local.',
+            keyOutcomes: 'By employing advanced Vision Language Models (VLM), we were able to analyze micro-expressions and "emotional contagion" during live performances in real-time. This framework demonstrates the project’s ability to apply cutting-edge AI and high-fidelity signal processing to study non-verbal communication in world-class musical contexts.',
+            images: [image3_1, image3_2, image3_3]
         },
         {
             id: 2,
@@ -35,13 +66,13 @@ const Events = () => {
             images: [image2_1, image2_2]
         },
         {
-            id: 3,
-            title: 'New York – Unical: Real-Time Transatlantic Emotion Analysis',
-            date: 'Dec 2025',
-            description: 'We successfully implemented a high-performance technical pipeline for the remote, real-time analysis of emotional dynamics between New York and the University of Calabria (Italy).',
-            technicalFramework: 'Using a ZeroTier Software Defined Network (SDN) and a custom FFmpeg/UDP streaming protocol, we established a secure, low-latency "virtual LAN" across the Atlantic. This allowed our GPU-accelerated servers in Italy to process live visual data from New York as if it were local.',
-            keyOutcomes: 'By employing advanced Vision Language Models (VLM), we were able to analyze micro-expressions and "emotional contagion" during live performances in real-time. This framework demonstrates the project’s ability to apply cutting-edge AI and high-fidelity signal processing to study non-verbal communication in world-class musical contexts.',
-            images: [image3_1, image3_2, image3_3]
+            id: 1,
+            title: 'Palermo: International Meeting "Extended Partnerships"',
+            date: 'Oct 21–22, 2025',
+            description: 'Presented our research at the international meeting "Partenariati Estesi: Dallo Stato dell’Arte alle Strategie per il Futuro", an event promoted by the MUSIC 4D project (funded by PNRR) to innovate the AFAM system through digitalization and AI.',
+            keyPresentation: 'I delivered a talk titled "Towards the Cyber Symbiotic Orchestra: Architecture and Methodologies for Human-Robot Emotional Teaming", showcasing a video summary of our work on human-robot interaction.',
+            keyOutcomes: 'The presentation highlighted our methodologies for the emotional analysis of visual communication between conductors, musicians, and the audience. Furthermore, I introduced the structure of the upcoming WP3 course: "Digital Music, Cybernetics, Generative AI, and Emotional Collaboration". The event fostered crucial dialogue between Italian and international institutions to strengthen Southern Italy\'s role as a hub for cultural and technological experimentation.',
+            images: [image1_1, image1_2, image1_3, image1_4]
         }
     ];
 
@@ -77,6 +108,11 @@ const Events = () => {
                                         <span className="px-4 py-1.5 rounded-full bg-accent-blue/10 text-accent-blue text-sm font-semibold border border-accent-blue/20">
                                             {event.date}
                                         </span>
+                                        {event.venue && (
+                                            <span className="px-4 py-1.5 rounded-full bg-purple-500/10 text-purple-400 text-sm font-semibold border border-purple-500/20">
+                                                {event.venue}
+                                            </span>
+                                        )}
                                     </div>
 
                                     <h3 className="text-3xl font-bold text-text-heading mb-6 leading-tight">
@@ -85,6 +121,52 @@ const Events = () => {
 
                                     <div className="space-y-6 text-text-secondary leading-relaxed">
                                         <p>{event.description}</p>
+
+                                        {event.about && (
+                                            <div>
+                                                <h4 className="text-text-main font-semibold mb-2">What it’s about</h4>
+                                                <p>{event.about}</p>
+                                            </div>
+                                        )}
+
+                                        {event.focusAreas && (
+                                            <div>
+                                                <h4 className="text-text-main font-semibold mb-2">Focus Areas</h4>
+                                                <ul className="list-disc list-inside space-y-1 ml-2">
+                                                    {event.focusAreas.map((area, idx) => (
+                                                        <li key={idx}>{area}</li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        )}
+
+                                        {event.organizers && (
+                                            <div>
+                                                <h4 className="text-text-main font-semibold mb-2">Organizers</h4>
+                                                <ul className="list-none space-y-1">
+                                                    {event.organizers.map((org, idx) => (
+                                                        <li key={idx} className="flex items-start gap-2">
+                                                            <span>•</span> <span>{org}</span>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        )}
+
+                                        {event.callForPapers && (
+                                            <div className="bg-white/5 p-4 rounded-xl border border-white/10 mt-4">
+                                                <h4 className="text-accent-blue font-bold mb-2 flex items-center gap-2">
+                                                    Call for Papers
+                                                </h4>
+                                                <p className="mb-2">{event.callForPapers.details}</p>
+                                                <div className="text-sm font-semibold text-text-heading mb-2">
+                                                    Submission Deadline: {event.callForPapers.deadline}
+                                                </div>
+                                                <div className="text-sm text-text-secondary">
+                                                    For queries <a href="mailto:giancarlo.fortino@unical.it" className="text-accent-blue hover:underline">contact us</a>
+                                                </div>
+                                            </div>
+                                        )}
 
                                         {event.keyPresentation && (
                                             <div>
