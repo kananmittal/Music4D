@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import logo from '../assets/logo.png';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +36,7 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
                 {/* Logo */}
                 <Link to="/" className="z-50 flex items-center gap-3">
-                    <img src="/logo.png" alt="HRC Music4D Logo" className="h-10 w-auto" />
+                    <img src={logo} alt="HRC Music4D Logo" className="h-10 w-auto" />
                     <span className={`text-xl font-bold font-heading tracking-tight transition-colors duration-300 ${scrolled || location.pathname !== '/' ? 'text-text-heading' : 'text-white'}`}>
                         HRC Music4D
                     </span>
@@ -101,8 +102,8 @@ const Navbar = () => {
                         </motion.div>
                     )}
                 </AnimatePresence>
-            </div>
-        </nav>
+            </div >
+        </nav >
     );
 };
 

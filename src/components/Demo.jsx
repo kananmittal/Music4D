@@ -39,7 +39,6 @@ const Demo = () => {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
                     className="rounded-xl shadow-lg overflow-hidden border border-gray-100 bg-black"
                 >
                     <video
