@@ -36,7 +36,7 @@ const Navbar = () => {
                 {/* Logo */}
                 <Link to="/" className="z-50 flex items-center gap-3">
                     <img src="/logo.png" alt="HRC Music4D Logo" className="h-10 w-auto" />
-                    <span className={`text-xl font-bold font-heading tracking-tight transition-colors duration-300 ${scrolled ? 'text-text-heading' : 'text-white'}`}>
+                    <span className={`text-xl font-bold font-heading tracking-tight transition-colors duration-300 ${scrolled || location.pathname !== '/' ? 'text-text-heading' : 'text-white'}`}>
                         HRC Music4D
                     </span>
                 </Link>

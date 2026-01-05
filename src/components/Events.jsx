@@ -56,6 +56,24 @@ const Events = () => {
             images: [ichmsImg, fortinoImg, chawlaImg, pupoImg]
         },
         {
+            id: 3,
+            title: 'New York – Unical: Real-Time Transatlantic Emotion Analysis',
+            date: 'Dec 2025',
+            description: 'We successfully implemented a high-performance technical pipeline for the remote, real-time analysis of emotional dynamics between New York and the University of Calabria (Italy).',
+            technicalFramework: 'Using a ZeroTier Software Defined Network (SDN) and a custom FFmpeg/UDP streaming protocol, we established a secure, low-latency "virtual LAN" across the Atlantic. This allowed our GPU-accelerated servers in Italy to process live visual data from New York as if it were local.',
+            keyOutcomes: 'By employing advanced Vision Language Models (VLM), we were able to analyze micro-expressions and "emotional contagion" during live performances in real-time. This framework demonstrates the project’s ability to apply cutting-edge AI and high-fidelity signal processing to study non-verbal communication in world-class musical contexts.',
+            images: [image3_1, image3_2, image3_3]
+        },
+        {
+            id: 1,
+            title: 'Palermo: International Meeting "Extended Partnerships"',
+            date: 'Oct 21–22, 2025',
+            description: 'Presented our research at the international meeting "Partenariati Estesi: Dallo Stato dell’Arte alle Strategie per il Futuro", an event promoted by the MUSIC 4D project (funded by PNRR) to innovate the AFAM system through digitalization and AI.',
+            keyPresentation: 'I delivered a talk titled "Towards the Cyber Symbiotic Orchestra: Architecture and Methodologies for Human-Robot Emotional Teaming", showcasing a video summary of our work on human-robot interaction.',
+            keyOutcomes: 'The presentation highlighted our methodologies for the emotional analysis of visual communication between conductors, musicians, and the audience. Furthermore, I introduced the structure of the upcoming WP3 course: "Digital Music, Cybernetics, Generative AI, and Emotional Collaboration". The event fostered crucial dialogue between Italian and international institutions to strengthen Southern Italy\'s role as a hub for cultural and technological experimentation.',
+            images: [image1_1, image1_2, image1_3, image1_4]
+        },
+        {
             id: 5,
             title: 'IEEE ICHMS 2025: Transforming Human-Machine Interactions',
             date: 'May 2025',
@@ -65,25 +83,6 @@ const Events = () => {
             keyAchievements: 'Presented two significant papers from the SPEME Lab: "Analyzing the Fusion of Federated Learning and Large Language Model" (by Dipanwita Thakur, Antonella Guzzo, Giancarlo Fortino) and "Exploring Multi-Agent Human-Robot Teaming Dynamics in a Musical Orchestral Context" (by Rashmi Chawla, Francesco Pupo, Giancarlo Fortino).',
             impact: 'Chaired the Special Session "Community-oriented wearable computing systems for healthcare in the continuum", fostering discussions on future wearable technologies.',
             images: [ichms25_1, ichms25_2, ichms25_3]
-        },
-        {
-            id: 3,
-            title: 'New York – Unical: Real-Time Transatlantic Emotion Analysis',
-            date: 'Dec 2025',
-            description: 'We successfully implemented a high-performance technical pipeline for the remote, real-time analysis of emotional dynamics between New York and the University of Calabria (Italy).',
-            technicalFramework: 'Using a ZeroTier Software Defined Network (SDN) and a custom FFmpeg/UDP streaming protocol, we established a secure, low-latency "virtual LAN" across the Atlantic. This allowed our GPU-accelerated servers in Italy to process live visual data from New York as if it were local.',
-            keyOutcomes: 'By employing advanced Vision Language Models (VLM), we were able to analyze micro-expressions and "emotional contagion" during live performances in real-time. This framework demonstrates the project’s ability to apply cutting-edge AI and high-fidelity signal processing to study non-verbal communication in world-class musical contexts.',
-            images: [image3_1, image3_2, image3_3]
-        },
-
-        {
-            id: 1,
-            title: 'Palermo: International Meeting "Extended Partnerships"',
-            date: 'Oct 21–22, 2025',
-            description: 'Presented our research at the international meeting "Partenariati Estesi: Dallo Stato dell’Arte alle Strategie per il Futuro", an event promoted by the MUSIC 4D project (funded by PNRR) to innovate the AFAM system through digitalization and AI.',
-            keyPresentation: 'I delivered a talk titled "Towards the Cyber Symbiotic Orchestra: Architecture and Methodologies for Human-Robot Emotional Teaming", showcasing a video summary of our work on human-robot interaction.',
-            keyOutcomes: 'The presentation highlighted our methodologies for the emotional analysis of visual communication between conductors, musicians, and the audience. Furthermore, I introduced the structure of the upcoming WP3 course: "Digital Music, Cybernetics, Generative AI, and Emotional Collaboration". The event fostered crucial dialogue between Italian and international institutions to strengthen Southern Italy\'s role as a hub for cultural and technological experimentation.',
-            images: [image1_1, image1_2, image1_3, image1_4]
         }
     ];
 
