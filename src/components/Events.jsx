@@ -18,7 +18,10 @@ import image3_3 from '../assets/image3_3.png';
 import fortinoImg from '../assets/Fortino-3.jpg';
 import chawlaImg from '../assets/Chwalla-768x768.jpeg';
 import pupoImg from '../assets/Pupo-1.jpeg';
-import unicalImg from '../assets/UNICAL.jpg';
+import ichmsImg from '../assets/ichms.png';
+import ichms25_1 from '../assets/1748262269515.jpeg';
+import ichms25_2 from '../assets/1748262274664.jpeg';
+import ichms25_3 from '../assets/1748262274977.jpeg';
 
 const Events = () => {
     const events = [
@@ -29,12 +32,17 @@ const Events = () => {
             description: 'We are organizing a Special Session on "Synergizing Generative AI, Human–Robot Collaboration, and High-Fidelity Digital Twins" under the MUSIC4D Framework.',
             venue: 'NTU, Singapore',
             about: 'This Special Session explores how Generative AI, Human–Robot Collaboration (HRC), and High-Fidelity Digital Twins converge to shape the next generation of human-centric intelligent systems. Aligned with the IEEE ICHMS 2026 theme “Beyond Interaction”, the session highlights the MUSIC4D paradigm, where intelligent systems do more than respond—they perceive, interpret, and synchronize with human intent through multimodal sensing and real-time digital representations. The focus is on bi-directional physical–virtual loops, enabling humans and robots to operate as cohesive teammates rather than tools, particularly in creative, industrial, and cyber-physical environments.',
-            focusAreas: [
-                'Human–Robot Teaming (HRT)',
-                'Generative & Adaptive Digital Twins',
-                'Multi-Agent and Edge Intelligence',
-                'Multimodal intent & emotion sensing',
-                'Trust, explainability & ethics'
+            topics: [
+                'Generative AI for Adaptive Behavior in Human-Robot Collaboration.',
+                'High-Fidelity Digital Twins for Real-time Physical-Virtual Synchronization.',
+                'Human-Robot Teaming (HRT): Models for Cohesion and "Entitativity."',
+                'Multi-Agent Architectures within the MUSIC4D Framework.',
+                'Edge-Driven Intelligence for Low-Latency Robotic Interaction.',
+                'Multi-Modal Intent and Emotion Recognition via Wearable Sensors.',
+                'Cyber-Symbiotic Orchestration in Creative and Performing Arts.',
+                'Trust and Explainability in Generative Human-Machine Systems.',
+                'Interoperability Standards for Pervasive Intelligent Environments.',
+                'Ethical Governance of Autonomous Agents in Shared Workspaces.'
             ],
             organizers: [
                 'Prof. Giancarlo Fortino, University of Calabria, Italy',
@@ -45,7 +53,18 @@ const Events = () => {
                 details: 'Open to global researchers in AI, Robotics, Cybernetics, and Human–Machine Systems. Standard IEEE 6-page format · Peer-reviewed.',
                 deadline: '31 Jan 2026'
             },
-            images: [unicalImg, fortinoImg, chawlaImg, pupoImg]
+            images: [ichmsImg, fortinoImg, chawlaImg, pupoImg]
+        },
+        {
+            id: 5,
+            title: 'IEEE ICHMS 2025: Transforming Human-Machine Interactions',
+            date: 'May 2025',
+            venue: 'Marriott Downtown, Abu Dhabi',
+            description: 'Participated in the 5th IEEE International Conference on Human-Machine Systems (ICHMS 2025), organized by Moayad Aloqaily and sponsored by the IEEE SMC Society.',
+            about: 'This conference series was founded in 2020 based on the proposal by Prof. Giancarlo Fortino, who also organized the online 2020 edition. The event serves as a premier forum for research on human-machine systems.',
+            keyAchievements: 'Presented two significant papers from the SPEME Lab: "Analyzing the Fusion of Federated Learning and Large Language Model" (by Dipanwita Thakur, Antonella Guzzo, Giancarlo Fortino) and "Exploring Multi-Agent Human-Robot Teaming Dynamics in a Musical Orchestral Context" (by Rashmi Chawla, Francesco Pupo, Giancarlo Fortino).',
+            impact: 'Chaired the Special Session "Community-oriented wearable computing systems for healthcare in the continuum", fostering discussions on future wearable technologies.',
+            images: [ichms25_1, ichms25_2, ichms25_3]
         },
         {
             id: 3,
@@ -56,15 +75,7 @@ const Events = () => {
             keyOutcomes: 'By employing advanced Vision Language Models (VLM), we were able to analyze micro-expressions and "emotional contagion" during live performances in real-time. This framework demonstrates the project’s ability to apply cutting-edge AI and high-fidelity signal processing to study non-verbal communication in world-class musical contexts.',
             images: [image3_1, image3_2, image3_3]
         },
-        {
-            id: 2,
-            title: 'Salzburg: AEC Congress and General Assembly',
-            date: 'Nov 2025',
-            description: 'The Music 4D project achieved significant international visibility at the Association Européenne des Conservatoires (AEC) Congress.',
-            keyAchievements: 'Our research and the WP3 course, "Digital Music, Cybernetics, Generative AI, and Emotional Collaboration", were presented to an audience of over 400 Directors and Executives from prestigious music institutions across the EU, China, Australia, and the Americas.',
-            impact: 'The presentation received great enthusiasm, confirming global institutional interest in our work on emotional collaboration and emerging technologies in music education.',
-            images: [image2_1, image2_2]
-        },
+
         {
             id: 1,
             title: 'Palermo: International Meeting "Extended Partnerships"',
@@ -129,12 +140,12 @@ const Events = () => {
                                             </div>
                                         )}
 
-                                        {event.focusAreas && (
+                                        {event.topics && (
                                             <div>
-                                                <h4 className="text-text-main font-semibold mb-2">Focus Areas</h4>
+                                                <h4 className="text-text-main font-semibold mb-2">List of Topics</h4>
                                                 <ul className="list-disc list-inside space-y-1 ml-2">
-                                                    {event.focusAreas.map((area, idx) => (
-                                                        <li key={idx}>{area}</li>
+                                                    {event.topics.map((topic, idx) => (
+                                                        <li key={idx}>{topic}</li>
                                                     ))}
                                                 </ul>
                                             </div>

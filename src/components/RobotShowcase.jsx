@@ -69,10 +69,7 @@ const RobotShowcase = () => {
                                     <h3 className="text-2xl font-bold font-heading text-white mb-1">{activeVideo.title}</h3>
                                     <p className="text-gray-400 text-sm">Real-time simulation</p>
                                 </div>
-                                <div className="flex items-center gap-2 bg-red-500/20 px-3 py-1 rounded-full border border-red-500/30">
-                                    <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-                                    <span className="text-xs font-mono text-red-500 uppercase font-bold">Live Feed</span>
-                                </div>
+
                             </div>
                         </div>
                     </div>

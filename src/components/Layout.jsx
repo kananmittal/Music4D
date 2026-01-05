@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
                 <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
                     <div className="text-center md:text-left">
                         <img src="/logo.png" alt="HRC Music4D Logo" className="h-8 w-auto mb-2 mx-auto md:mx-0" />
-                        <p className="text-text-secondary text-sm">Empowering emotion through AI and sound.</p>
+                        <p className="text-text-secondary text-sm">Empowering HRC via AI-driven emotions and sounds</p>
                     </div>
 
                     <div className="text-sm text-text-secondary">

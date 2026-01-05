@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import RobotShowcase from './RobotShowcase';
 
 const Article = ({ date, title, children, delay = 0 }) => (
     <motion.article
@@ -29,11 +28,6 @@ const Article = ({ date, title, children, delay = 0 }) => (
 const HomeContent = () => {
     return (
         <div className="bg-primary-bg border-t border-gray-100">
-
-            {/* Full Width Robot Showcase - Moved to Top */}
-            <div id="project-overview">
-                <RobotShowcase />
-            </div>
 
             <div className="py-24 max-w-6xl mx-auto px-6">
 

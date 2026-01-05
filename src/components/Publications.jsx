@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import certRashmi from '../assets/IEEECH_Certificate_of_Participation_Rashmi_Chawla.pdf';
 
 const Publications = () => {
     const pubs = [
@@ -14,12 +15,13 @@ const Publications = () => {
         },
         {
             title: "EAC-HRC: Emotion-Aware Communication for Human-Robot Collaboration in a Music Orchestra System",
-            authors: "Rashmi Chawla, Raffaele Longo, Francesco Pupo and Giancarlo Fortino",
-            journal: "",
-            year: "",
+            authors: "Chawla, R., Longo, R., Pupo, F., Fortino, G.",
+            journal: "2025 IEEE 5th International Conference on Human-Machine Systems (ICHMS)",
+            year: "May 2025",
             pages: "",
-            publisher: "",
-            link: ""
+            publisher: "IEEE",
+            link: certRashmi,
+            linkText: "Certificate"
         }
     ];
 
@@ -30,7 +32,7 @@ const Publications = () => {
                 {pubs.map((pub, idx) => (
                     <motion.li
                         key={idx}
-                        initial={{ opacity: 0, scale: 0.95 }}
+                        initial={{ opacity: 1, scale: 1 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.4, delay: idx * 0.1 }}
                         viewport={{ once: true }}
@@ -49,7 +51,7 @@ const Publications = () => {
                         <p className="text-text-secondary italic text-sm mb-2">{pub.journal}, {pub.year} {pub.pages && `(${pub.pages})`}</p>
                         {pub.link && (
                             <a href={pub.link} target="_blank" rel="noopener noreferrer" className="text-sm text-accent-blue hover:text-blue-700 underline decoration-1 underline-offset-2">
-                                View Publication
+                                {pub.linkText || "View Publication"}
                             </a>
                         )}
                     </motion.li>

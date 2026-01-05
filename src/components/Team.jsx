@@ -13,7 +13,7 @@ import imgLongo from '../assets/rlongo_pic.bmp';
 
 // Department Logos
 import logoDimes from '../assets/logo_dimes_Q.png';
-import badgeSpeme from '../assets/HCR-Ribbon_Social_215x335_ForInstitutions-193x300.png';
+import badgeSpeme from '../assets/HCR-Ribbon_Social_215x335_ForInstitutions.png';
 
 const Team = () => {
     // Grouping team members for hierarchy
