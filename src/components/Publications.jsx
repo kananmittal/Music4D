@@ -16,8 +16,8 @@ const Publications = () => {
         {
             title: "EAC-HRC: Emotion-Aware Communication for Human-Robot Collaboration in a Music Orchestra System",
             authors: "Chawla, R., Longo, R., Pupo, F., Fortino, G.",
-            journal: "2025 IEEE 5th International Conference on Human-Machine Systems (ICHMS)",
-            year: "May 2025",
+            journal: "2025 IEEE International Conference on Cyber Humanities",
+            year: "Sept. 8 – 10, 2025 Florence, Italy",
             pages: "",
             publisher: "IEEE",
             link: certRashmi,
