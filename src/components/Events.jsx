@@ -31,15 +31,7 @@ import ieeeImg4 from '../assets/WhatsApp Image 2026-01-05 at 11.13.49.jpeg';
 
 const Events = () => {
     const events = [
-        {
-            id: 6,
-            title: 'Emotion Meets Intelligence: Redefining Human-Robot Collaboration',
-            date: 'Sept. 8 – 10, 2025',
-            venue: 'Florence, Italy',
-            description: 'Presented our work "EAC-HRC: Emotion-Aware Communication for Human-Robot Collaboration in a Music Orchestra System". This research explores how robots can sense and respond to human emotion, transforming collaboration from mechanical precision to empathetic partnership.',
-            keyAchievements: 'Highlights the intersection of cybernetics, arts, and emotional intelligence. Special thanks to Giancarlo Fortino, Raffaele Longo, Dr. Francesco Pupo, and the organizers for a diverse and inspiring exchange of ideas.',
-            images: [ieeeImg1, ieeeImg2, ieeeImg3, ieeeImg4]
-        },
+
         {
             id: 4,
             title: 'Special Session @ IEEE ICHMS 2026',
@@ -87,6 +79,15 @@ const Events = () => {
             keyPresentation: 'I delivered a talk titled "Towards the Cyber Symbiotic Orchestra: Architecture and Methodologies for Human-Robot Emotional Teaming", showcasing a video summary of our work on human-robot interaction.',
             keyOutcomes: 'The presentation highlighted our methodologies for the emotional analysis of visual communication between conductors, musicians, and the audience. Furthermore, I introduced the structure of the upcoming WP3 course: "Digital Music, Cybernetics, Generative AI, and Emotional Collaboration". The event fostered crucial dialogue between Italian and international institutions to strengthen Southern Italy\'s role as a hub for cultural and technological experimentation.',
             images: [image1_1, image1_2, image1_3, image1_4]
+        },
+        {
+            id: 6,
+            title: 'Emotion Meets Intelligence: Redefining Human-Robot Collaboration',
+            date: 'Sept. 8 – 10, 2025',
+            venue: 'Florence, Italy',
+            description: 'Presented our work "EAC-HRC: Emotion-Aware Communication for Human-Robot Collaboration in a Music Orchestra System". This research explores how robots can sense and respond to human emotion, transforming collaboration from mechanical precision to empathetic partnership.',
+            keyAchievements: 'Highlights the intersection of cybernetics, arts, and emotional intelligence. Special thanks to Giancarlo Fortino, Raffaele Longo, Dr. Francesco Pupo, and the organizers for a diverse and inspiring exchange of ideas.',
+            images: [ieeeImg1, ieeeImg2, ieeeImg3, ieeeImg4]
         },
         {
             id: 5,
