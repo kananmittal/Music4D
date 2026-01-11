@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import heroBg1 from '../assets/UNICAL.jpg';
 import heroBg2 from '../assets/UNICAL_flags-1280x853.jpg';
 import heroBg3 from '../assets/images-2.jpeg';
-import heroBg4 from '../assets/images.jpeg';
+import heroBg4 from '../assets/carousel_4.jpeg';
 
 const backgrounds = [heroBg1, heroBg2, heroBg3, heroBg4];
 
