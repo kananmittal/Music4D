@@ -167,11 +167,12 @@ const Demo = () => {
     return (
         <div className="min-h-screen bg-primary-bg">
             <div className="pt-28 pb-12 mx-auto px-4 sm:px-6 lg:px-8">
-                {/* 1. Tutti Bot Section */}
-                <div className="mb-20">
-                    <div className="text-center mb-10">
+
+                {/* --- SECTION 1: TUTTI BOT --- */}
+                <div className="mb-32 border-b border-slate-200 pb-20">
+                    <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-5xl font-bold font-heading text-text-heading mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
-                            Tutti Bot
+                            Tutti bot - The grading tool
                         </h2>
                         <p className="text-text-secondary max-w-2xl mx-auto">
                             Interact with our advanced music analysis bot. Upload your audio and score to get started.
@@ -273,14 +274,13 @@ const Demo = () => {
                             </div>
                         </TabsContent>
 
-                        {/* PERFORMANCE TAB - UPDATED WITH HEIGHT FIX */}
+                        {/* PERFORMANCE TAB */}
                         <TabsContent value="performance" key={activeTab} className="max-w-5xl mx-auto">
                             {analysisResult ? (
                                 <div className="space-y-6">
                                     <Card className="border-2 border-blue-200 shadow-xl overflow-hidden bg-white">
                                         <div className="bg-blue-600 p-4 text-white font-bold">🎯 Performance Metrics</div>
                                         <CardContent className="p-6">
-                                            {/* Fixed Height Container to prevent -1 width errors */}
                                             <div style={{ width: '100%', height: '400px', minHeight: '400px' }}>
                                                 <ResponsiveContainer width="100%" height="100%">
                                                     <BarChart
@@ -415,62 +415,67 @@ const Demo = () => {
                     </Tabs>
                 </div>
 
-                {/* 2. EMOTION DETECTION SECTION */}
-                <div className="mb-20">
+                {/* --- SECTION 2: EMOTION DETECTION REAL TIME --- */}
+                <div className="mb-32 border-b border-slate-200 pb-20">
                     <div className="text-center mb-10">
-                        <h1 className="text-2xl md:text-3xl font-bold font-heading text-text-heading tracking-tight uppercase">
-                            EMOTION DETECTION REAL TIME DEMO – POWERED BY GENERATIVE AI MODEL “Paligemma”
+                        <h1 className="text-2xl md:text-5xl font-bold font-heading text-text-heading tracking-tight uppercase mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
+                            Emotion Detection Real Time
                         </h1>
+                        <p className="text-text-secondary max-w-2xl mx-auto">
+                            Powered by generative AI model "Paligemma"
+                        </p>
                     </div>
 
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                        className="w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black/50 backdrop-blur-sm"
-                    >
-                        <iframe
-                            src="https://baubab4-vlm-wordpress.hf.space"
-                            width="100%"
-                            height="600"
-                            allow="camera; microphone; clipboard-read; clipboard-write;"
-                            style={{ border: 'none' }}
-                            title="Paligemma Emotion Detection"
-                        />
-                    </motion.div>
+                    <div className="space-y-16">
+                        {/* Paligemma Iframe */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6 }}
+                            className="w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black/50 backdrop-blur-sm"
+                        >
+                            <iframe
+                                src="https://baubab4-vlm-wordpress.hf.space"
+                                width="100%"
+                                height="600"
+                                allow="camera; microphone; clipboard-read; clipboard-write;"
+                                style={{ border: 'none' }}
+                                title="Paligemma Emotion Detection"
+                            />
+                        </motion.div>
+
+                        {/* Demo Video */}
+                        <div className="max-w-5xl mx-auto text-center">
+                            <h3 className="text-2xl font-bold text-text-heading mb-4">Watch the GEM AI in action</h3>
+                            <motion.div
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6 }}
+                                className="rounded-xl shadow-lg overflow-hidden border border-gray-100 bg-black"
+                            >
+                                <video
+                                    src={demoVideo}
+                                    controls
+                                    className="w-full h-auto max-h-[70vh]"
+                                    poster=""
+                                >
+                                    Your browser does not support the video tag.
+                                </video>
+                            </motion.div>
+                        </div>
+                    </div>
                 </div>
 
-                {/* 3. TECHNICAL SHOWCASE (Robot Showcase) */}
+                {/* --- SECTION 3: MEET THE HRC MUSIC4D ROBOT --- */}
                 <div className="mb-20 text-center">
-                    <h1 className="text-3xl font-bold text-text-heading mb-10 uppercase">TECHNICAL SHOWCASE</h1>
+                    <h1 className="text-3xl md:text-5xl font-bold font-heading text-text-heading mb-10 uppercase bg-clip-text text-transparent bg-gradient-to-r from-slate-700 to-slate-900">
+                        Meet The HRC Music4D Robot
+                    </h1>
                     <RobotShowcase />
                 </div>
 
-                {/* 4. VIDEO SECTION */}
-                <div className="max-w-5xl mx-auto text-center">
-                    <h1 className="text-3xl font-bold text-text-heading mb-4">Demo</h1>
-                    <p className="text-text-secondary mb-12 max-w-2xl mx-auto">
-                        Watch the GEM AI in action.
-                    </p>
-
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                        className="rounded-xl shadow-lg overflow-hidden border border-gray-100 bg-black"
-                    >
-                        <video
-                            src={demoVideo}
-                            controls
-                            className="w-full h-auto max-h-[70vh]"
-                            poster=""
-                        >
-                            Your browser does not support the video tag.
-                        </video>
-                    </motion.div>
-                </div>
             </div>
         </div>
     );
