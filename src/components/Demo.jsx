@@ -418,7 +418,7 @@ const Demo = () => {
                 {/* --- SECTION 2: EMOTION DETECTION REAL TIME --- */}
                 <div id="emotion-detection" className="mb-32 border-b border-slate-200 pb-20">
                     <div className="text-center mb-10">
-                        <h1 className="text-2xl md:text-5xl font-bold font-heading text-text-heading tracking-tight uppercase mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
+                        <h1 className="text-2xl md:text-5xl font-bold font-heading text-text-heading tracking-tight uppercase mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-600">
                             Emotion Detection Real Time
                         </h1>
                         <p className="text-text-secondary max-w-2xl mx-auto">
