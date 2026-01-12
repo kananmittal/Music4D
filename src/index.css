@@ -16,6 +16,9 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     @apply bg-primary-bg text-text-main font-sans antialiased text-gray-900;
     min-height: 100vh;

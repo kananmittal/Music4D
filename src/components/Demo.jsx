@@ -169,7 +169,7 @@ const Demo = () => {
             <div className="pt-28 pb-12 mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* --- SECTION 1: TUTTI BOT --- */}
-                <div className="mb-32 border-b border-slate-200 pb-20">
+                <div id="tutti-bot" className="mb-32 border-b border-slate-200 pb-20">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-5xl font-bold font-heading text-text-heading mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
                             Tutti bot - The grading tool
@@ -416,7 +416,7 @@ const Demo = () => {
                 </div>
 
                 {/* --- SECTION 2: EMOTION DETECTION REAL TIME --- */}
-                <div className="mb-32 border-b border-slate-200 pb-20">
+                <div id="emotion-detection" className="mb-32 border-b border-slate-200 pb-20">
                     <div className="text-center mb-10">
                         <h1 className="text-2xl md:text-5xl font-bold font-heading text-text-heading tracking-tight uppercase mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
                             Emotion Detection Real Time
@@ -469,7 +469,7 @@ const Demo = () => {
                 </div>
 
                 {/* --- SECTION 3: MEET THE HRC MUSIC4D ROBOT --- */}
-                <div className="mb-20 text-center">
+                <div id="robot-showcase" className="mb-20 text-center">
                     <h1 className="text-3xl md:text-5xl font-bold font-heading text-text-heading mb-10 uppercase bg-clip-text text-transparent bg-gradient-to-r from-slate-700 to-slate-900">
                         Meet The HRC Music4D Robot
                     </h1>
