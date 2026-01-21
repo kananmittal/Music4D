@@ -21,6 +21,7 @@ const Navbar = () => {
     const navItems = [
         { name: 'Home', path: '/' },
         { name: 'Project Overview', path: '/project-overview' },
+        { name: 'The PNRR MUSIC4D Project', path: '/pnrr-project' },
         { name: 'Team', path: '/team' },
         { name: 'Publications', path: '/publications' },
         { name: 'Events', path: '/events' },

@@ -10,6 +10,7 @@ import Equipment from './components/Equipment';
 import Publications from './components/Publications';
 import Events from './components/Events';
 import Contact from './components/Contact';
+import PnrrProject from './components/PnrrProject';
 import './App.css';
 
 function Home() {
@@ -28,6 +29,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/project-overview" element={<ProjectOverview />} />
+          <Route path="/pnrr-project" element={<PnrrProject />} />
           <Route path="/team" element={<Team />} />
           <Route path="/equipment" element={<Equipment />} />
           <Route path="/publications" element={<Publications />} />
