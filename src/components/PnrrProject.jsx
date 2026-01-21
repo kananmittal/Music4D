@@ -4,6 +4,7 @@ import m4dSymbol from '../assets/M4D_simbolo.png';
 
 const PnrrProject = () => {
     const partners = [
+        "CONSERVATORIO SCARLATTI DI PALERMO (Project Coordinator)",
         "Conservatory of Music “Luigi Canepa” of Sassari",
         "Conservatory “Giovanni Pierluigi da Palestrina” of Cagliari",
         "State Conservatory of Music “V. Bellini” of Caltanissetta",

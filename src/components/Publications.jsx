@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import certRashmi from '../assets/IEEECH_Certificate_of_Participation_Rashmi_Chawla.pdf';
 
 const Publications = () => {
     const pubs = [
@@ -20,8 +19,7 @@ const Publications = () => {
             year: "Sept. 8 – 10, 2025 Florence, Italy",
             pages: "",
             publisher: "IEEE",
-            link: certRashmi,
-            linkText: "Certificate"
+            link: "https://ieeexplore.ieee.org/document/11279369"
         }
     ];
 
