@@ -40,7 +40,7 @@ const Team = () => {
     const indianCollaborators = [
         { name: 'Kanan Mittal', linkedin: 'https://www.linkedin.com/in/kanan-mittal-0a1b54289/', image: imgKanan, affiliation: "Undergraduate Student at IGDTUW, Delhi" },
         { name: 'Nikhilsingh Parihar', linkedin: 'https://www.linkedin.com/in/nikhilsingh-parihar/', image: imgNikhil, affiliation: "MS by Research, SPCRC, IIIT Hyderabad" },
-        { name: 'Rupesh', linkedin: null, image: imgRupesh, affiliation: "Collaborator" }
+        { name: 'Rupesh', linkedin: 'https://www.linkedin.com/in/rupesh-batra-0b3716118/', image: imgRupesh, affiliation: "Collaborator" }
     ];
 
     const MemberCard = ({ member, size = "md" }) => {
