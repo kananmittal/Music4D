@@ -8,6 +8,9 @@ import imgKhan from '../assets/Khan-264x300-2-150x150.jpg';
 import imgPresta from '../assets/MattiaPresta.png';
 import imgChawla from '../assets/Chwalla-768x768.jpeg';
 import imgPerri from '../assets/Perri.png';
+import imgKanan from '../assets/Kanan.png';
+import imgNikhil from '../assets/Nikhil.png';
+import imgRupesh from '../assets/rupesh.png';
 
 import imgLongo from '../assets/rlongo_pic.bmp';
 
@@ -32,6 +35,12 @@ const Team = () => {
         { name: 'Caterina Perri', role: 'Team Member', linkedin: null, image: imgPerri, affiliation: "Ph. D, Post doc at University of Calabria" },
         { name: 'Akhtar Khan', role: 'Team Member', linkedin: null, image: imgKhan, affiliation: "Ph. D at University of Calabria" },
         { name: 'Mattia Presta', role: 'Team Member', linkedin: 'https://www.linkedin.com/in/mattia-presta-66488939a/', image: imgPresta, affiliation: "Generative AI and Machine Learning Engineer Specialist & Research fellow at University of Calabria" }
+    ];
+
+    const indianCollaborators = [
+        { name: 'Kanan Mittal', role: 'Collaborator', linkedin: 'https://www.linkedin.com/in/kanan-mittal-0a1b54289/', image: imgKanan, affiliation: "Collaborator" },
+        { name: 'Nikhilsingh Parihar', role: 'Collaborator', linkedin: 'https://www.linkedin.com/in/nikhilsingh-parihar/', image: imgNikhil, affiliation: "Collaborator" },
+        { name: 'Rupesh', role: 'Collaborator', linkedin: null, image: imgRupesh, affiliation: "Collaborator" }
     ];
 
     const MemberCard = ({ member, size = "md" }) => {
@@ -157,6 +166,19 @@ const Team = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {tier3.map((member, idx) => <MemberCard key={idx} member={member} />)}
                     </div>
+
+                    {/* Indian Collaborators */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-center pt-10"
+                    >
+                        <h2 className="text-3xl font-bold font-heading text-text-heading mb-10">Collaborators</h2>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                            {indianCollaborators.map((member, idx) => <MemberCard key={idx} member={member} />)}
+                        </div>
+                    </motion.div>
                 </div>
             </div>
         </div>
