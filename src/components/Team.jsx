@@ -38,9 +38,9 @@ const Team = () => {
     ];
 
     const indianCollaborators = [
-        { name: 'Kanan Mittal', role: 'Collaborator', linkedin: 'https://www.linkedin.com/in/kanan-mittal-0a1b54289/', image: imgKanan, affiliation: "Collaborator" },
-        { name: 'Nikhilsingh Parihar', role: 'Collaborator', linkedin: 'https://www.linkedin.com/in/nikhilsingh-parihar/', image: imgNikhil, affiliation: "Collaborator" },
-        { name: 'Rupesh', role: 'Collaborator', linkedin: null, image: imgRupesh, affiliation: "Collaborator" }
+        { name: 'Kanan Mittal', linkedin: 'https://www.linkedin.com/in/kanan-mittal-0a1b54289/', image: imgKanan, affiliation: "Undergraduate Student at IGDTUW, Delhi" },
+        { name: 'Nikhilsingh Parihar', linkedin: 'https://www.linkedin.com/in/nikhilsingh-parihar/', image: imgNikhil, affiliation: "MS by Research, SPCRC, IIIT Hyderabad" },
+        { name: 'Rupesh', linkedin: null, image: imgRupesh, affiliation: "Collaborator" }
     ];
 
     const MemberCard = ({ member, size = "md" }) => {
@@ -174,7 +174,7 @@ const Team = () => {
                         viewport={{ once: true }}
                         className="text-center pt-10"
                     >
-                        <h2 className="text-3xl font-bold font-heading text-text-heading mb-10">Collaborators</h2>
+                        <h2 className="text-3xl font-bold font-heading text-text-heading mb-10"> Indian Collaborators</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
                             {indianCollaborators.map((member, idx) => <MemberCard key={idx} member={member} />)}
                         </div>
