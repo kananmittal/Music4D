@@ -29,8 +29,50 @@ import ieeeImg2 from '../assets/WhatsApp Image 2026-01-05 at 11.13.46.jpeg';
 import ieeeImg3 from '../assets/WhatsApp Image 2026-01-05 at 11.13.49 (1).jpeg';
 import ieeeImg4 from '../assets/WhatsApp Image 2026-01-05 at 11.13.49.jpeg';
 
+// Importing India visit images
+import indiaImg1 from '../assets/india_visit/WhatsApp Image 2026-01-30 at 21.05.47 (2).jpeg';
+import indiaImg2 from '../assets/india_visit/WhatsApp Image 2026-01-30 at 21.05.47 (1).jpeg';
+import indiaImg3 from '../assets/india_visit/WhatsApp Image 2026-01-30 at 21.05.07.jpeg';
+import indiaImg4 from '../assets/india_visit/WhatsApp Image 2026-01-30 at 21.04.15 (1).jpeg';
+import indiaImg5 from '../assets/india_visit/WhatsApp Image 2026-01-30 at 21.05.47.jpeg';
+import indiaImg6 from '../assets/india_visit/WhatsApp Image 2026-01-30 at 21.05.06.jpeg';
+import indiaImg7 from '../assets/india_visit/WhatsApp Image 2026-01-30 at 21.05.48 (1).jpeg';
+import indiaImg8 from '../assets/india_visit/WhatsApp Image 2026-01-30 at 21.05.48.jpeg';
+import indiaImg9 from '../assets/india_visit/WhatsApp Image 2026-01-30 at 21.04.44.jpeg';
+import indiaImg10 from '../assets/india_visit/WhatsApp Image 2026-01-30 at 21.04.15.jpeg';
+import indiaImg11 from '../assets/india_visit/WhatsApp Image 2026-01-30 at 21.03.37 (2).jpeg';
+import indiaImg12 from '../assets/india_visit/WhatsApp Image 2026-01-30 at 21.03.37 (1).jpeg';
+
 const Events = () => {
     const events = [
+        {
+            id: 7,
+            title: 'The MUSIC4D Project Arrives in India: A Journey of Innovation',
+            date: '23rd – 28th January 2026',
+            venue: 'India',
+            description: 'The MUSIC4D project embarked on an extraordinary journey across India, bringing together academia, industry, and innovation in a week-long tour that showcased the transformative power of Human-Robot Collaboration.',
+            story: 'From the bustling corridors of premier technical institutes to the boardrooms of energy giants, the MUSIC4D initiative found a resonant home in India. Led by Prof. Giancarlo Fortino and Dr. Rashmi Chawla, the team traversed the nation, weaving a narrative of how emotion-aware systems and intelligent machines can harmonize with human creativity and expertise.',
+            highlights: [
+                {
+                    institution: 'NTPC NETRA',
+                    description: 'Engaging with industry leaders on the future of energy and automation, exploring how Human-Robot Collaboration can revolutionize critical infrastructure.'
+                },
+                {
+                    institution: 'J.C. Bose University of Science and Technology, YMCA',
+                    description: 'Captivating students and faculty with demonstrations of academic excellence and the emotional dimensions of human-machine systems.'
+                },
+                {
+                    institution: 'IIIT Delhi',
+                    description: 'Presenting cutting-edge research to one of India\'s premier technical institutes, sparking conversations about the future of intelligent collaboration.'
+                },
+                {
+                    institution: 'Manav Rachna / BVICAM',
+                    description: 'Expanding our collaborative network and fostering partnerships that bridge continents and disciplines.'
+                }
+            ],
+            impact: 'The presentations illuminated both the emotional intelligence embedded within the MUSIC4D framework and the technical rigor of Human-Machine Systems. The enthusiastic reception across corporate, public, and private sectors marks a pivotal milestone-not just for the project, but for the future of collaborative intelligence in India and beyond.',
+            images: [indiaImg1, indiaImg2, indiaImg3, indiaImg4, indiaImg5, indiaImg6, indiaImg7, indiaImg8, indiaImg9, indiaImg10, indiaImg11, indiaImg12]
+        },
 
         {
             id: 4,
@@ -147,6 +189,27 @@ const Events = () => {
 
                                     <div className="space-y-6 text-text-secondary leading-relaxed">
                                         <p>{event.description}</p>
+
+                                        {event.story && (
+                                            <div>
+                                                <h4 className="text-text-main font-semibold mb-2">The Journey</h4>
+                                                <p>{event.story}</p>
+                                            </div>
+                                        )}
+
+                                        {event.highlights && (
+                                            <div>
+                                                <h4 className="text-text-main font-semibold mb-2">Tour Highlights</h4>
+                                                <div className="space-y-3">
+                                                    {event.highlights.map((highlight, idx) => (
+                                                        <div key={idx} className="bg-white/5 p-4 rounded-lg border border-white/10">
+                                                            <h5 className="text-accent-blue font-semibold mb-1">{highlight.institution}</h5>
+                                                            <p className="text-sm">{highlight.description}</p>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        )}
 
                                         {event.about && (
                                             <div>
