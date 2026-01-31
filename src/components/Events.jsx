@@ -40,9 +40,8 @@ import indiaImg7 from '../assets/india_visit/WhatsApp Image 2026-01-30 at 21.05.
 import indiaImg8 from '../assets/india_visit/WhatsApp Image 2026-01-30 at 21.05.48.jpeg';
 import indiaImg9 from '../assets/india_visit/WhatsApp Image 2026-01-30 at 21.04.44.jpeg';
 import indiaImg10 from '../assets/india_visit/WhatsApp Image 2026-01-30 at 21.04.15.jpeg';
-import indiaImg11 from '../assets/india_visit/WhatsApp Image 2026-01-30 at 21.03.37 (2).jpeg';
-import indiaImg12 from '../assets/india_visit/WhatsApp Image 2026-01-30 at 21.03.37 (1).jpeg';
-
+import indiaImg13 from '../assets/india_visit/WhatsApp Image 2026-01-30 at 21.03.37.jpeg';
+import indiaImg14 from '../assets/india_visit/Screenshot 2026-02-01 at 2.46.47 AM.png';
 const Events = () => {
     const events = [
         {
@@ -71,7 +70,7 @@ const Events = () => {
                 }
             ],
             impact: 'The presentations illuminated both the emotional intelligence embedded within the MUSIC4D framework and the technical rigor of Human-Machine Systems. The enthusiastic reception across corporate, public, and private sectors marks a pivotal milestone-not just for the project, but for the future of collaborative intelligence in India and beyond.',
-            images: [indiaImg1, indiaImg2, indiaImg3, indiaImg4, indiaImg5, indiaImg6, indiaImg7, indiaImg8, indiaImg9, indiaImg10, indiaImg11, indiaImg12]
+            images: [indiaImg1, indiaImg2, indiaImg3, indiaImg13, indiaImg4, indiaImg5, indiaImg6, indiaImg7, indiaImg8, indiaImg9, indiaImg10, indiaImg14]
         },
 
         {
@@ -296,7 +295,7 @@ const Events = () => {
 
                                 {/* Image Gallery Section */}
                                 <div className="lg:w-1/2">
-                                    <div className="grid grid-cols-2 gap-4 h-full content-center items-center">
+                                    <div className="grid grid-cols-2 gap-6">
                                         {event.images.map((img, imgIndex) => {
                                             const isThreeImages = event.images.length === 3;
                                             const isTopImage = isThreeImages && imgIndex === 0;
@@ -321,7 +320,8 @@ const Events = () => {
                                                     transition={{ duration: 0.3 }}
                                                     className={`relative rounded-xl overflow-hidden shadow-lg ${spanClass}`}
                                                     style={{
-                                                        maxHeight: isTopImage ? '500px' : 'none'
+                                                        aspectRatio: isTopImage ? '16/9' : '1/1',
+                                                        minHeight: '200px'
                                                     }}
                                                 >
                                                     <img
