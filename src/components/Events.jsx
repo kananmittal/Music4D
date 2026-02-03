@@ -69,7 +69,7 @@ const Events = () => {
                     description: 'Expanding our collaborative network and fostering partnerships that bridge continents and disciplines.'
                 }
             ],
-            impact: 'The presentations illuminated both the emotional intelligence embedded within the MUSIC4D framework and the technical rigor of Human-Machine Systems. The enthusiastic reception across corporate, public, and private sectors marks a pivotal milestone-not just for the project, but for the future of collaborative intelligence in India and beyond.',
+            impact: 'The Music4D activities highlighted significant advances in intelligent music environments, where music acts as a dynamic interface for Human–Machine and Human–Robot collaboration. The framework demonstrates how emotional intelligence, multimodal sensing, and AI-driven adaptation can be embedded within music-centric environments to enable real-time interaction, collective engagement, and contextual responsiveness. Across the presented events, Music4D showcased methodological progress in designing adaptive music ecosystems integrating alignment layers, interactive agents, and cognitive models to support collaborative intelligence in both creative and socio-technical settings. These advances position Music4D as a foundational approach for next-generation smart music environments, with strong relevance for research, industry, and public-sector innovation in India and globally.',
             images: [indiaImg1, indiaImg2, indiaImg3, indiaImg13, indiaImg4, indiaImg5, indiaImg6, indiaImg7, indiaImg8, indiaImg9, indiaImg10, indiaImg14]
         },
 
