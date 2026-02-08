@@ -10,7 +10,7 @@ const Publications = () => {
             year: "2026",
             pages: "pp. 1–11",
             publisher: "IEEE",
-            link: "https://doi.org/10.1109/TCSS.2026.3660598"
+            link: ""
         },
         {
             title: "Generative AI-driven group emotion recognition: A comparative analysis of holistic and compositional strategies",
