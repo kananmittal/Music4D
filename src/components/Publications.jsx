@@ -4,6 +4,24 @@ import { motion } from 'framer-motion';
 const Publications = () => {
     const pubs = [
         {
+            title: "GEM-AI: A generative AI driven zero-shot method for group emotion recognition",
+            authors: "P. Molinaro and G. Fortino",
+            journal: "IEEE Trans. Comput. Soc. Syst.",
+            year: "2026",
+            pages: "pp. 1–11",
+            publisher: "IEEE",
+            link: "https://doi.org/10.1109/TCSS.2026.3660598"
+        },
+        {
+            title: "Generative AI-driven group emotion recognition: A comparative analysis of holistic and compositional strategies",
+            authors: "P. Molinaro, M. Presta, and G. Fortino",
+            journal: "in Proc. 2026 IEEE Conf. Artif. Intell. (CAI), 2026. To appear.",
+            year: "2026",
+            pages: "",
+            publisher: "IEEE",
+            link: ""
+        },
+        {
             title: "Exploring Multi-Agent Human-Robot Teaming Dynamics in a Musical Orchestral Context",
             authors: "Chawla, R., Pupo, F., & Fortino, G.",
             journal: "2025 IEEE 5th International Conference on Human-Machine Systems (ICHMS)",
