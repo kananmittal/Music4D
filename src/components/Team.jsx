@@ -37,7 +37,7 @@ const Team = () => {
         { name: 'Mattia Presta', role: 'Team Member', linkedin: 'https://www.linkedin.com/in/mattia-presta-66488939a/', image: imgPresta, affiliation: "Generative AI and Machine Learning Engineer Specialist & Research fellow at University of Calabria" }
     ];
 
-    const indianCollaborators = [
+    const researchCollaborators = [
         { name: 'Kanan Mittal', linkedin: 'https://www.linkedin.com/in/kanan-mittal-0a1b54289/', image: imgKanan, affiliation: "Undergraduate Student at IGDTUW, Delhi" },
         { name: 'Nikhilsingh Parihar', linkedin: 'https://www.linkedin.com/in/nikhilsingh-parihar/', image: imgNikhil, affiliation: "MS by Research, SPCRC, IIIT Hyderabad" },
         { name: 'Rupesh', linkedin: 'https://www.linkedin.com/in/rupesh-batra-0b3716118/', image: imgRupesh, affiliation: "Collaborator" }
@@ -174,9 +174,9 @@ const Team = () => {
                         viewport={{ once: true }}
                         className="text-center pt-10"
                     >
-                        <h2 className="text-3xl font-bold font-heading text-text-heading mb-10"> Indian Collaborators</h2>
+                        <h2 className="text-3xl font-bold font-heading text-text-heading mb-10"> Research Collaborators</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                            {indianCollaborators.map((member, idx) => <MemberCard key={idx} member={member} />)}
+                            {researchCollaborators.map((member, idx) => <MemberCard key={idx} member={member} />)}
                         </div>
                     </motion.div>
                 </div>
