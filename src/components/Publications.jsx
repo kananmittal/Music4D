@@ -3,6 +3,34 @@ import { motion } from 'framer-motion';
 
 const Publications = () => {
     const pubs = [
+        // --- NEW PUBLICATIONS ---
+        {
+        title: "Toward a Humanoid Conductor: Beat-Pattern Gesture Synthesis and Evaluation on the Unitree",
+        authors: "Akhtar Khan, Rashmi Chawla*, Raffaele Longo, Pupo Francesco, Giancarlo Fortino",
+        journal: "in The 6th IEEE International Conference on Human-Machine Systems (ICHMS) 2026. To appear.",
+        year: "2026",
+        pages: "",
+        publisher: "IEEE",
+        link: ""
+        },
+        {
+        title: "Geo-NWM: A Theoretical Framework for Geometry-Consistent World Models in 6-DoF Humanoid Navigation",
+        authors: "Rupesh Batra*, Chawla Ritvik, Giancarlo Fortino",
+        journal: "in The 6th IEEE International Conference on Human-Machine Systems (ICHMS) 2026. To appear.",
+        year: "2026",
+        pages: "",
+        publisher: "IEEE",
+        link: ""
+        },
+         {
+        title: "SAFE-GUARD: Audio Emotion Recognition System for Real-Time Public Place Abuse Detection",
+        authors: "Kanan Mittal, Rashmi Chawla, Giancarlo Fortino",
+        journal: "in IEEE Conference on Artificial Intelligence (CAI) 2026. To appear",
+        year: "2026",
+        pages: "",
+        publisher: "IEEE",
+        link: ""
+         },
         {
             title: "GEM-AI: A generative AI driven zero-shot method for group emotion recognition",
             authors: "P. Molinaro and G. Fortino",
