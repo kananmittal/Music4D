@@ -13,6 +13,7 @@ import imgNikhil from '../assets/Nikhil.png';
 import imgRupesh from '../assets/rupesh.png';
 
 import imgLongo from '../assets/rlongo_pic.bmp';
+import imgRoboCon from '../assets/unitree-g1.png';
 
 // Department Logos
 import logoDimes from '../assets/logo_dimes_Q.png';
@@ -26,8 +27,12 @@ const Team = () => {
 
     const tier2 = [
         { name: 'Francesco Pupo', role: 'Researcher', linkedin: 'https://projects.dimes.unical.it/music4d/il-team/', image: imgPupo, affiliation: "Associate Professor at University of Calabria" },
+        { name: 'Rashmi Chawla', role: 'Robotic and AI Researcher', linkedin: 'https://www.linkedin.com/in/rashmi-chawla-710348128/', image: imgChawla, affiliation: "Associate Professor at JC Bose University, YMCA, India & Post Doc. Researcher at University of Calabria" }
+    ];
+
+    const tier2Row2 = [
         { name: 'Raffaele Longo', role: 'Music Expert', linkedin: 'https://www.linkedin.com/in/raffaele-longo-897560b7', image: imgLongo, affiliation: "Full Professor of Music Theory ‘Luigi Cherubini” State Conservatory of Music FLORENCE" },
-        { name: 'Rashmi Chawla', role: 'Researcher', linkedin: 'https://www.linkedin.com/in/rashmi-chawla-710348128/', image: imgChawla, affiliation: "Associate Professor at JC Bose University, YMCA, India & Post Doc. Researcher at University of Calabria" }
+        { name: 'RoboCon (Unitree G1)', role: 'Music Conductor', linkedin: null, image: imgRoboCon, affiliation: "Understands gestures, understands emotions, University of Calabria" }
     ];
 
     const tier3 = [
@@ -157,9 +162,14 @@ const Team = () => {
                         {tier1.map((member, idx) => <MemberCard key={idx} member={member} size="lg" />)}
                     </div>
 
-                    {/* Tier 2: Key Researchers */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    {/* Tier 2: Key Researchers (Row 1) */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                         {tier2.map((member, idx) => <MemberCard key={idx} member={member} />)}
+                    </div>
+
+                    {/* Tier 2: Key Researchers (Row 2) */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        {tier2Row2.map((member, idx) => <MemberCard key={`row2-${idx}`} member={member} />)}
                     </div>
 
                     {/* Tier 3: Team Members */}
