@@ -175,7 +175,7 @@ const Team = () => {
                     </div>
 
                     {/* Tier 3: Team Members */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
                         {tier3.map((member, idx) => <MemberCard key={idx} member={member} />)}
                     </div>
 
