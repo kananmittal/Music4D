@@ -6,6 +6,7 @@ import imgPupo from '../assets/Pupo-1.jpeg';
 import imgMolinaro from '../assets/Molinaro-768x768.jpeg';
 import imgKhan from '../assets/Khan-264x300-2-150x150.jpg';
 import imgPresta from '../assets/MattiaPresta.png';
+import imgRubino from '../assets/Pasquale Rubino.jpeg';
 import imgChawla from '../assets/Chwalla-768x768.jpeg';
 import imgPerri from '../assets/Perri.png';
 import imgKanan from '../assets/Kanan.png';
@@ -39,6 +40,7 @@ const Team = () => {
         { name: 'Pasquale Molinaro', role: 'Team Member', linkedin: 'https://www.linkedin.com/in/pasquale-molinaro-8654021aa/', image: imgMolinaro, affiliation: "Generative AI and Machine Learning Engineer Specialist & Research fellow at University of Calabria" },
         { name: 'Caterina Perri', role: 'Team Member', linkedin: null, image: imgPerri, affiliation: "Ph. D, Post doc at University of Calabria" },
         { name: 'Akhtar Khan', role: 'Team Member', linkedin: null, image: imgKhan, affiliation: "Ph. D at University of Calabria" },
+        { name: 'Pasquale Rubino', role: 'Team Member', linkedin: 'https://www.linkedin.com/in/pasquale-rubino-940602243', image: imgRubino, affiliation: "Ph.D student on ICT at University of Calabria" },
         { name: 'Mattia Presta', role: 'Team Member', linkedin: 'https://www.linkedin.com/in/mattia-presta-66488939a/', image: imgPresta, affiliation: "Generative AI and Machine Learning Engineer Specialist & Research fellow at University of Calabria" }
     ];
 
