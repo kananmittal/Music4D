@@ -42,8 +42,68 @@ import indiaImg9 from '../assets/india_visit/WhatsApp Image 2026-01-30 at 21.04.
 import indiaImg10 from '../assets/india_visit/WhatsApp Image 2026-01-30 at 21.04.15.jpeg';
 import indiaImg13 from '../assets/india_visit/WhatsApp Image 2026-01-30 at 21.03.37.jpeg';
 import indiaImg14 from '../assets/india_visit/Screenshot 2026-02-01 at 2.46.47 AM.png';
+
+// Importing China visit images
+import chinaImg1 from '../assets/china_visit/1775911620846.jpeg';
+import chinaImg2 from '../assets/china_visit/1776095980620.jpeg';
+import chinaImg3 from '../assets/china_visit/1776149576010.jpeg';
+import chinaImg4 from '../assets/china_visit/1776266997010.jpeg';
+import chinaImg5 from '../assets/china_visit/1776499893131.jpeg';
+import chinaImg6 from '../assets/china_visit/1776821195391.jpeg';
+import chinaImg7 from '../assets/china_visit/1776912828851.jpeg';
+import chinaImg8 from '../assets/china_visit/1777026146593.jpeg';
+import chinaImg9 from '../assets/china_visit/1777026155191.jpeg';
+
 const Events = () => {
     const events = [
+        {
+            id: 8,
+            title: 'MUSIC4D Lands in China: A Tour of Innovation and Collaboration',
+            date: 'April 2026',
+            venue: 'Various Institutions, China',
+            description: 'Prof. Giancarlo Fortino embarked on an extensive academic tournée across China to disseminate the results of the MUSIC4D project and present cutting-edge research on Generative Digital Twins and Human-Robot Artistic Collaboration.',
+            story: 'Throughout April 2026, the MUSIC4D project was presented at multiple prestigious institutions across China. The talks focused on "Emotions-driven Human-Robot Artistic Collaboration", showcasing how Artificial Intelligence can capture and generate behaviors and emotions in musical environments, as well as the principles and applications of Generative Digital Twins in the edge-cloud continuum.',
+            highlights: [
+                {
+                    institution: 'SIMIT, Chinese Academy of Sciences (Shanghai)',
+                    description: 'Talk on IoT, edge-cloud continuum, and generative digital twins applied to Intelligent Transportation Systems.'
+                },
+                {
+                    institution: 'Zhejiang University (Hangzhou)',
+                    description: 'Lectures on Human-Robot Artistic Collaboration in the MUSIC4D framework and Generative Digital Twins.'
+                },
+                {
+                    institution: 'Anhui University (Hefei)',
+                    description: 'Presentation on "Human-Robot Artistic Collaboration" at the School of Artificial Intelligence.'
+                },
+                {
+                    institution: 'SCUT (Guangzhou)',
+                    description: 'Emotions-driven Human-Robot Artistic Collaboration presentation, with active interaction from local research groups and industry leaders.'
+                },
+                {
+                    institution: 'Guangdong University of Technology (Guangzhou)',
+                    description: 'Invited talk on "Generative Digital Twins" at the School of Computer Science and Technology.'
+                },
+                {
+                    institution: 'SIAT - Chinese Academy of Science (Shenzhen)',
+                    description: 'Invited talk as CAS PIFI International Distinguished Scientist on the MUSIC4D project.'
+                },
+                {
+                    institution: 'Harbin Engineering University',
+                    description: 'Presentation of the MUSIC4D project within the framework of Program 111.'
+                },
+                {
+                    institution: 'Tongji University',
+                    description: 'Talk on Generative Digital Twins and experience sharing.'
+                },
+                {
+                    institution: 'AIITA 2026 (Chongqing)',
+                    description: 'Keynote on "Generative Digital Twins: Principles, Architecture, Methodology and Applications" to an audience of over 300 attendees.'
+                }
+            ],
+            impact: 'This comprehensive tour successfully expanded the international reach of the MUSIC4D project. It fostered crucial dialogue with top-tier academic institutions in China, paving the way for future joint research and collaborations in the fields of Generative AI, IoT, and human-centric intelligent systems.',
+            images: [chinaImg1, chinaImg2, chinaImg3, chinaImg4, chinaImg5, chinaImg6, chinaImg7, chinaImg8, chinaImg9]
+        },
         {
             id: 7,
             title: 'The MUSIC4D Project Arrives in India: A Journey of Innovation',
@@ -170,7 +230,7 @@ const Events = () => {
                         >
                             <div className="flex flex-col lg:flex-row gap-12">
                                 {/* Content Section */}
-                                <div className="lg:w-1/2 flex flex-col justify-center">
+                                <div className={`flex flex-col justify-center ${event.images && event.images.length > 0 ? 'lg:w-1/2' : 'w-full'}`}>
                                     <div className="flex items-center gap-4 mb-4">
                                         <span className="px-4 py-1.5 rounded-full bg-accent-blue/10 text-accent-blue text-sm font-semibold border border-accent-blue/20">
                                             {event.date}
@@ -294,8 +354,9 @@ const Events = () => {
                                 </div>
 
                                 {/* Image Gallery Section */}
-                                <div className="lg:w-1/2">
-                                    <div className="grid grid-cols-2 gap-6">
+                                {event.images && event.images.length > 0 && (
+                                    <div className="lg:w-1/2">
+                                        <div className="grid grid-cols-2 gap-6">
                                         {event.images.map((img, imgIndex) => {
                                             const isThreeImages = event.images.length === 3;
                                             const isTopImage = isThreeImages && imgIndex === 0;
@@ -335,6 +396,7 @@ const Events = () => {
                                         })}
                                     </div>
                                 </div>
+                                )}
                             </div>
                         </motion.div>
                     ))}
