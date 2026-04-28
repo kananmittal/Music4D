@@ -357,45 +357,45 @@ const Events = () => {
                                 {event.images && event.images.length > 0 && (
                                     <div className="lg:w-1/2">
                                         <div className="grid grid-cols-2 gap-6">
-                                        {event.images.map((img, imgIndex) => {
-                                            const isThreeImages = event.images.length === 3;
-                                            const isTopImage = isThreeImages && imgIndex === 0;
-                                            const isVerticalImage = isThreeImages && imgIndex === 2;
+                                            {event.images.map((img, imgIndex) => {
+                                                const isThreeImages = event.images.length === 3;
+                                                const isTopImage = isThreeImages && imgIndex === 0;
+                                                const isVerticalImage = isThreeImages && imgIndex === 2;
 
-                                            // Layout Logic:
-                                            // 3 images: Index 0 spans 2 (top). Index 1 & 2 span 1 (bottom row).
-                                            // Odd images (not 3): Last one spans 2.
-                                            let spanClass = '';
-                                            if (isThreeImages) {
-                                                if (isTopImage) spanClass = 'col-span-2';
-                                            } else {
-                                                if (event.images.length % 2 !== 0 && imgIndex === event.images.length - 1) {
-                                                    spanClass = 'col-span-2';
+                                                // Layout Logic:
+                                                // 3 images: Index 0 spans 2 (top). Index 1 & 2 span 1 (bottom row).
+                                                // Odd images (not 3): Last one spans 2.
+                                                let spanClass = '';
+                                                if (isThreeImages) {
+                                                    if (isTopImage) spanClass = 'col-span-2';
+                                                } else {
+                                                    if (event.images.length % 2 !== 0 && imgIndex === event.images.length - 1) {
+                                                        spanClass = 'col-span-2';
+                                                    }
                                                 }
-                                            }
 
-                                            return (
-                                                <motion.div
-                                                    key={imgIndex}
-                                                    whileHover={{ scale: 1.05 }}
-                                                    transition={{ duration: 0.3 }}
-                                                    className={`relative rounded-xl overflow-hidden shadow-lg ${spanClass}`}
-                                                    style={{
-                                                        aspectRatio: isTopImage ? '16/9' : '1/1',
-                                                        minHeight: '200px'
-                                                    }}
-                                                >
-                                                    <img
-                                                        src={img}
-                                                        alt={`${event.title} image ${imgIndex + 1}`}
-                                                        className={`w-full h-full ${isVerticalImage ? 'object-contain' : 'object-cover'}`}
-                                                    />
-                                                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
-                                                </motion.div>
-                                            );
-                                        })}
+                                                return (
+                                                    <motion.div
+                                                        key={imgIndex}
+                                                        whileHover={{ scale: 1.05 }}
+                                                        transition={{ duration: 0.3 }}
+                                                        className={`relative rounded-xl overflow-hidden shadow-lg ${spanClass}`}
+                                                        style={{
+                                                            aspectRatio: isTopImage ? '16/9' : '1/1',
+                                                            minHeight: '200px'
+                                                        }}
+                                                    >
+                                                        <img
+                                                            src={img}
+                                                            alt={`${event.title} image ${imgIndex + 1}`}
+                                                            className={`w-full h-full ${isVerticalImage ? 'object-contain' : 'object-cover'}`}
+                                                        />
+                                                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
+                                                    </motion.div>
+                                                );
+                                            })}
+                                        </div>
                                     </div>
-                                </div>
                                 )}
                             </div>
                         </motion.div>

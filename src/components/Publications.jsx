@@ -5,6 +5,15 @@ const Publications = () => {
     const pubs = [
         // --- NEW PUBLICATIONS ---
         {
+            title: "Emotion recognition in human robot collaboration for multimodal approaches, real-world challenges and future directions",
+            authors: "Parihar, N., Kanan, Chawla, R. et al.",
+            journal: "Discov. Robot.",
+            year: "2026",
+            pages: "2, 13",
+            publisher: "",
+            link: "https://doi.org/10.1007/s44430-026-00028-2"
+        },
+        {
             title: "Negotiating Interpretative Trust and Embodied Dialogue in Human-Robot Musical Partnerships",
             authors: "Raffaele Longo, Rashmi Chawla, Giancarlo Fortino",
             journal: "InMusic Conference 2026",
