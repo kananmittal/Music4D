@@ -6,7 +6,7 @@ const Publications = () => {
         // --- NEW PUBLICATIONS ---
         {
             title: "Emotion recognition in human robot collaboration for multimodal approaches, real-world challenges and future directions",
-            authors: "Parihar, N., Kanan, Chawla, R. et al.",
+            authors: "Nikhilsingh Parihar, Kanan, Rashmi Chawla, Giancarlo Fortino",
             journal: "Discov. Robot.",
             year: "2026",
             pages: "2, 13",
@@ -42,7 +42,7 @@ const Publications = () => {
         },
         {
             title: "SAFE-GUARD: Audio Emotion Recognition System for Real-Time Public Place Abuse Detection",
-            authors: "Kanan Mittal, Rashmi Chawla, Giancarlo Fortino",
+            authors: "Kanan, Rashmi Chawla, Giancarlo Fortino",
             journal: "in IEEE Conference on Artificial Intelligence (CAI) 2026. To appear",
             year: "2026",
             pages: "",
@@ -51,7 +51,7 @@ const Publications = () => {
         },
         {
             title: "GEM-AI: A generative AI driven zero-shot method for group emotion recognition",
-            authors: "P. Molinaro and G. Fortino",
+            authors: "Pasquale Molinaro, Giancarlo Fortino",
             journal: "IEEE Trans. Comput. Soc. Syst.",
             year: "2026",
             pages: "pp. 1–11",
@@ -60,7 +60,7 @@ const Publications = () => {
         },
         {
             title: "Generative AI-driven group emotion recognition: A comparative analysis of holistic and compositional strategies",
-            authors: "P. Molinaro, M. Presta, and G. Fortino",
+            authors: "Pasquale Molinaro, Mattia Presta, Giancarlo Fortino",
             journal: "in Proc. 2026 IEEE Conf. Artif. Intell. (CAI), 2026. To appear.",
             year: "2026",
             pages: "",
@@ -69,7 +69,7 @@ const Publications = () => {
         },
         {
             title: "Exploring Multi-Agent Human-Robot Teaming Dynamics in a Musical Orchestral Context",
-            authors: "Chawla, R., Pupo, F., & Fortino, G.",
+            authors: "Rashmi Chawla, Francesco Pupo, Giancarlo Fortino",
             journal: "2025 IEEE 5th International Conference on Human-Machine Systems (ICHMS)",
             year: "May 2025",
             pages: "pp. 356-361",
@@ -78,7 +78,7 @@ const Publications = () => {
         },
         {
             title: "EAC-HRC: Emotion-Aware Communication for Human-Robot Collaboration in a Music Orchestra System",
-            authors: "Chawla, R., Longo, R., Pupo, F., Fortino, G.",
+            authors: "Rashmi Chawla, Raffaele Longo, Francesco Pupo, Giancarlo Fortino",
             journal: "2025 IEEE International Conference on Cyber Humanities",
             year: "Sept. 8 – 10, 2025 Florence, Italy",
             pages: "",
