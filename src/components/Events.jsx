@@ -54,8 +54,33 @@ import chinaImg7 from '../assets/china_visit/1776912828851.jpeg';
 import chinaImg8 from '../assets/china_visit/1777026146593.jpeg';
 import chinaImg9 from '../assets/china_visit/1777026155191.jpeg';
 
+// Importing Workshop images
+import workshopImg1 from '../assets/Workshop-hrc-music4d/1778528757291.jpeg';
+import workshopImg2 from '../assets/Workshop-hrc-music4d/1778696727765.jpeg';
+import workshopImg3 from '../assets/Workshop-hrc-music4d/1778696729754.jpeg';
+import workshopImg5 from '../assets/Workshop-hrc-music4d/1778696735718.jpeg';
+import workshopImg6 from '../assets/Workshop-hrc-music4d/WhatsApp Image 2026-05-15 at 14.53.12 (1).jpeg';
+import workshopImg7 from '../assets/Workshop-hrc-music4d/WhatsApp Image 2026-05-15 at 14.53.12.jpeg';
+
 const Events = () => {
     const events = [
+        {
+            id: 9,
+            title: 'Workshop: Artistic Human-Robot Collaboration in MUSIC4D',
+            date: 'May 13, 2026',
+            venue: 'Teatro Auditorium Unical (TAU) - Rende (CS)',
+            description: 'Artificial Intelligence that captures and generates artistic behaviors and emotions in techno-musical environments and beyond.',
+            story: 'At the intersection between Artistic Intelligence and (Embodied) Artificial Intelligence, our RoBoCON platform supported hybrid emotions-enriched HRC classical music performances in the context of a science-fiction musical storytelling involving the main soundtracks of outstanding AI science-fiction movies played by an ensemble orchestra conducted by the extraordinary M° Michelangelo Galeati and by our RoBoCon robot!!!',
+            topics: [
+                'Scientific and technical presentation of the RoBoCon platform',
+                'Demonstrations of human-robot collaboration in classical music',
+                'AI capable of interpreting and expressing emotions',
+                'Interaction between the orchestra and robot in innovative scenarios'
+            ],
+            keyAchievements: 'The event attracted a large local audience, nearly 200 in-person attendees, and an international remote audience of almost 100 participants spanning America, Europe, Africa, the Middle East, China, India, and Australia.',
+            impact: 'Developed as part of the PNRR-funded MUSIC4D project, this experimental platform demonstrates the viability of utilizing AI and robotics to modernize Higher Arts Education (AFAM). By advancing the methodologies for multi-modal emotion sensing and real-time adaptation, the research establishes a foundation for scalable intelligent systems that can function as collaborative partners across creative, performative, and broader socio-technical industries.',
+            images: [workshopImg1, workshopImg2, workshopImg3, workshopImg5, workshopImg6, workshopImg7]
+        },
         {
             id: 8,
             title: 'MUSIC4D Lands in China: A Tour of Innovation and Collaboration',
@@ -359,17 +384,20 @@ const Events = () => {
                                         <div className="grid grid-cols-2 gap-6">
                                             {event.images.map((img, imgIndex) => {
                                                 const isThreeImages = event.images.length === 3;
+                                                const isPoster = typeof img === 'string' && img.includes('1778528757291.jpeg');
                                                 const isTopImage = isThreeImages && imgIndex === 0;
                                                 const isVerticalImage = isThreeImages && imgIndex === 2;
 
                                                 // Layout Logic:
-                                                // 3 images: Index 0 spans 2 (top). Index 1 & 2 span 1 (bottom row).
-                                                // Odd images (not 3): Last one spans 2.
                                                 let spanClass = '';
-                                                if (isThreeImages) {
+                                                if (isPoster) {
+                                                    spanClass = 'col-span-1 row-span-2';
+                                                } else if (isThreeImages) {
                                                     if (isTopImage) spanClass = 'col-span-2';
                                                 } else {
-                                                    if (event.images.length % 2 !== 0 && imgIndex === event.images.length - 1) {
+                                                    const hasPoster = event.images.some(i => typeof i === 'string' && i.includes('1778528757291.jpeg'));
+                                                    const effectiveLength = hasPoster ? event.images.length - 1 : event.images.length;
+                                                    if (effectiveLength % 2 !== 0 && imgIndex === event.images.length - 1) {
                                                         spanClass = 'col-span-2';
                                                     }
                                                 }
@@ -381,14 +409,14 @@ const Events = () => {
                                                         transition={{ duration: 0.3 }}
                                                         className={`relative rounded-xl overflow-hidden shadow-lg ${spanClass}`}
                                                         style={{
-                                                            aspectRatio: isTopImage ? '16/9' : '1/1',
+                                                            aspectRatio: isPoster ? 'auto' : (isTopImage ? '16/9' : '1/1'),
                                                             minHeight: '200px'
                                                         }}
                                                     >
                                                         <img
                                                             src={img}
                                                             alt={`${event.title} image ${imgIndex + 1}`}
-                                                            className={`w-full h-full ${isVerticalImage ? 'object-contain' : 'object-cover'}`}
+                                                            className={`w-full h-full ${isVerticalImage || isPoster ? 'object-contain' : 'object-cover'}`}
                                                         />
                                                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
                                                     </motion.div>
