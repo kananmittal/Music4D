@@ -384,7 +384,7 @@ const Events = () => {
                                         <div className="grid grid-cols-2 gap-6">
                                             {event.images.map((img, imgIndex) => {
                                                 const isThreeImages = event.images.length === 3;
-                                                const isPoster = typeof img === 'string' && img.includes('1778528757291.jpeg');
+                                                const isPoster = typeof img === 'string' && img.includes('1778528757291');
                                                 const isTopImage = isThreeImages && imgIndex === 0;
                                                 const isVerticalImage = isThreeImages && imgIndex === 2;
 
@@ -395,7 +395,7 @@ const Events = () => {
                                                 } else if (isThreeImages) {
                                                     if (isTopImage) spanClass = 'col-span-2';
                                                 } else {
-                                                    const hasPoster = event.images.some(i => typeof i === 'string' && i.includes('1778528757291.jpeg'));
+                                                    const hasPoster = event.images.some(i => typeof i === 'string' && i.includes('1778528757291'));
                                                     const effectiveLength = hasPoster ? event.images.length - 1 : event.images.length;
                                                     if (effectiveLength % 2 !== 0 && imgIndex === event.images.length - 1) {
                                                         spanClass = 'col-span-2';
