@@ -62,6 +62,19 @@ import workshopImg5 from '../assets/Workshop-hrc-music4d/1778696735718.jpeg';
 import workshopImg6 from '../assets/Workshop-hrc-music4d/WhatsApp Image 2026-05-15 at 14.53.12 (1).jpeg';
 import workshopImg7 from '../assets/Workshop-hrc-music4d/WhatsApp Image 2026-05-15 at 14.53.12.jpeg';
 
+// Importing CAI images (ID 10)
+import caiImg1 from '../assets/Granada/cai/1778356127885.jpeg';
+import caiImg2 from '../assets/Granada/cai/1778356128867.jpeg';
+import caiImg3 from '../assets/Granada/cai/1778356155363.jpeg';
+
+// Importing Citic Welcome images (ID 11)
+import guImg1 from '../assets/Granada/GU/1778411184114.jpeg';
+import guImg2 from '../assets/Granada/GU/1778496281223.jpeg';
+import guImg3 from '../assets/Granada/GU/1778496284808.jpeg';
+import guImg4 from '../assets/Granada/GU/1778496284890.jpeg';
+import guImg5 from '../assets/Granada/GU/1778496285582.jpeg';
+import guImg6 from '../assets/Granada/GU/1778496287043.jpeg';
+
 const Events = () => {
     const events = [
         {
@@ -79,7 +92,36 @@ const Events = () => {
             ],
             keyAchievements: 'The event attracted a large local audience, nearly 200 in-person attendees, and an international remote audience of almost 100 participants spanning America, Europe, Africa, the Middle East, China, India, and Australia.',
             impact: 'Developed as part of the PNRR-funded MUSIC4D project, this experimental platform demonstrates the viability of utilizing AI and robotics to modernize Higher Arts Education (AFAM). By advancing the methodologies for multi-modal emotion sensing and real-time adaptation, the research establishes a foundation for scalable intelligent systems that can function as collaborative partners across creative, performative, and broader socio-technical industries.',
+            featuredArticle: 'https://www.lacnews24.it/attualita/maestro-e-robot-dirigono-lorchestra-allunical-in-scena-lalleanza-tra-uomo-e-intelligenza-artificiale-nella-musica-q8nm2q7e',
             images: [workshopImg1, workshopImg2, workshopImg3, workshopImg5, workshopImg6, workshopImg7]
+        },
+        {
+            id: 11,
+            title: 'Emotions-driven Human-Robot Artistic Collaboration at Citic Welcome',
+            date: 'May 11, 2026',
+            venue: 'Salon de Grados, E.T.S. of Computer and Telecommunication Engineering, Granada, Spain',
+            description: 'Prof. Giancarlo Fortino delivered an insightful talk on Artificial Intelligence that captures and generates behaviors and emotions in musical environments, disseminating the results of the MUSIC4D project.',
+            about: 'The classic musical orchestra domain serves as a rich, unstructured, and expressive setting to study human-robot coordination, communication, control, and collective creativity. The presentation explored the integration of Emotion Aware Communication in Human-Robot Collaboration (EAC-HRC) within the context of orchestral conducting, promoting human-centric, intelligent systems where human ingenuity and machine intelligence co-evolve.',
+            topics: [
+                'A conceptual review of Multi-Agent HRT combining multi-modal communication and sensory modalities.',
+                'A Humanoid Conductor enabling Beat-Pattern Gesture Synthesis and Evaluation on the Unitree G1 robotic platform.',
+                'A framework for audio-to-emotion recognition in musical settings transitioning the robot\'s role to a collaborative teammate.'
+            ],
+            impact: 'The findings established a foundation for advancing Human-Robot Collaboration (HRC) in artistic domains, offering insights into creating more intuitive and emotionally resonant collaborative experiences through enhanced synchronization and emotion sentiment analysis.',
+            images: [guImg1, guImg2, guImg3, guImg4, guImg5, guImg6]
+        },
+        {
+            id: 10,
+            title: 'IEEE Conference on Artificial Intelligence (CAI) 2026',
+            date: 'May 8 - 10, 2026',
+            venue: 'Granada, Spain',
+            description: 'The SPEMELab group successfully presented three significant research papers at the prestigious IEEE Conference on Artificial Intelligence 2026.',
+            presentedPapers: [
+                '"Generative AI-driven Group Emotion Recognition: A Comparative Analysis of Holistic and Compositional Strategies" by Molinaro, Pasquale; Presta, Mattia; Fortino, Giancarlo',
+                '"SAFE-GUARD: Audio Emotion Recognition System for Real-Time Public Place Abuse Detection" by Mittal, Kanan; Chawla, Rashmi; Fortino, Giancarlo',
+                '"Lightweight U-Net Autoencoders with Semantic Compression for Unsupervised Fault Detection in Water Distribution Systems" by Li, Qimeng; Islam, Md Babul; Chen, Shuaijie; Qi, Wen; Massimo, Guarascio; Vinci, Andrea; Guerrieri, Antonio; Cicirelli, Franco; Fortino, Giancarlo'
+            ],
+            images: [caiImg1, caiImg2, caiImg3]
         },
         {
             id: 8,
@@ -313,6 +355,17 @@ const Events = () => {
                                             </div>
                                         )}
 
+                                        {event.presentedPapers && (
+                                            <div>
+                                                <h4 className="text-text-main font-semibold mb-2">Presented Papers</h4>
+                                                <ul className="list-disc list-inside space-y-2 ml-2">
+                                                    {event.presentedPapers.map((paper, idx) => (
+                                                        <li key={idx} className="text-sm leading-relaxed">{paper}</li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        )}
+
                                         {event.organizers && (
                                             <div>
                                                 <h4 className="text-text-main font-semibold mb-2">Organizers</h4>
@@ -373,6 +426,20 @@ const Events = () => {
                                             <div>
                                                 <h4 className="text-text-main font-semibold mb-2">Impact</h4>
                                                 <p>{event.impact}</p>
+                                            </div>
+                                        )}
+
+                                        {event.featuredArticle && (
+                                            <div className="pt-2">
+                                                <a 
+                                                    href={event.featuredArticle} 
+                                                    target="_blank" 
+                                                    rel="noopener noreferrer" 
+                                                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent-blue/10 text-accent-blue rounded-xl border border-accent-blue/20 hover:bg-accent-blue/20 transition-colors duration-300 font-semibold text-sm shadow-sm"
+                                                >
+                                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                                                    Read Featured Article
+                                                </a>
                                             </div>
                                         )}
                                     </div>
