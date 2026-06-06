@@ -5,6 +5,15 @@ const Publications = () => {
     const pubs = [
         // --- NEW PUBLICATIONS ---
         {
+            title: "Mitigating Hallucination in Multimodal Information Systems: A Comparative Analysis of Modular LLM Architectures",
+            authors: "Rashmi Chawla, Sunita Dahiya, Gaurav Singh, Giancarlo Fortino",
+            journal: "IEEE Transactions on Computational Social Systems",
+            year: "2026",
+            pages: "pp. 1-20",
+            publisher: "IEEE",
+            link: "https://ieeexplore.ieee.org/document/11548617"
+        },
+        {
             title: "Emotion recognition in human robot collaboration for multimodal approaches, real-world challenges and future directions",
             authors: "Nikhilsingh Parihar, Kanan, Rashmi Chawla, Giancarlo Fortino",
             journal: "Discov. Robot.",
